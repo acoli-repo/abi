@@ -7,8 +7,6 @@ Requirements
 
 - blazegraph.jar (please place it into the folder "TextAnalyse/Nanolib")
 
-- Python 2.7
-
 
 Adjustments
 ===========
