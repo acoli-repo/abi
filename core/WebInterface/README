@@ -1,0 +1,20 @@
+Requirements
+============
+
+- Java JRE 1.8
+
+- Tomcat 7
+
+- blazegraph.jar (please place it into the folder "TextAnalyse/Nanolib")
+
+
+Adjustments
+===========
+
+Please adjust the path under 
+
+- "TextAnalyse/src/com/ta/resource/messages.properties"
+- "TextAnalyse/src/com/ta/controller/WebController.java" (Line 86)
+
+- please put "parse_triples.py" (https://valian.uni-frankfurt.de/svn/repository/intern/text-mining/triplevis/converters/parse_triples.py) from the Acoli repository into "TextAnalyse/src/com/ta/converters/" (we actually use a modified version)
+- please put "index.html" (https://valian.uni-frankfurt.de/svn/repository/intern/text-mining/triplevis/interface/index.html) from the Acoli repository into "/TextAnalyse/WebContent/WEB-INF/jsp/" (modify name to "visual.html")
