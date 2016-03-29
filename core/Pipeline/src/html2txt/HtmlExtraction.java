@@ -41,27 +41,27 @@ public class HtmlExtraction {
 		
 			org.jsoup.nodes.Element html = doc.select("html").first();
 			String id = html.id();
-		if(doc.select("article").first().equals(null)){
-			org.jsoup.nodes.Element content = doc.select("html").first();
-			Elements ptext = content.children();
-			content.getElementsByTag("p");
-			//org.jsoup.nodes.Element content = doc.getElementById(id);
-			//Elements ptext = content.getElementsByTag("p");
-			for (org.jsoup.nodes.Element ts : ptext) {
-				text =ts.text();
-				System.out.println(ts.text());
-				lines.add(text);
-			}
-		}
-		else{
+		try{
 			org.jsoup.nodes.Element article = doc.select("article").first();
 			Elements ptext = article.children();
 			article.getElementsByTag("p");
 			for (org.jsoup.nodes.Element ts : ptext) {
 				text =ts.text();
 				System.out.println(ts.text());
-				lines.add(text);
+				lines.add(text);	
 			}
+			}
+			catch(Exception e){
+				org.jsoup.nodes.Element content = doc.select("html").first();
+				Elements ptext1 = content.children();
+				content.getElementsByTag("p");
+				//org.jsoup.nodes.Element content = doc.getElementById(id);
+				//Elements ptext = content.getElementsByTag("p");
+				for (org.jsoup.nodes.Element ts : ptext1) {
+					text =ts.text();
+					System.out.println(ts.text());
+					lines.add(text);
+				}
 			
 		}
 		
@@ -101,7 +101,7 @@ public class HtmlExtraction {
 //						.getContent("https://de.wikipedia.org/wiki/Heinrich_Christian_Burckhardt"));
 
 		
-		he.parseDocumentFromFile("/home/kathrin/workspace/PraktikumWS1516/localFiles/inputPipeline/de/html/zeit.html");
+		he.parseDocumentFromFile("/home/kathrin/workspace/PraktikumWS1516/localFiles/inputPipeline/en/html/telegraph.html");
 		
 
 	}
