@@ -81,7 +81,7 @@ public class Pipeline {
 		SBD.sbd(locationProject+outputPipeline+language+"/txt", locationProject+outputPipeline+language+"/sentences/");
 		
 		//annotate the sentences
-		Mate.MateEnglishGerman.mate(language);
+		Mate.mateEnglishGermanShell.mate(language);
 			
 		
 		
@@ -113,4 +113,6 @@ public class Pipeline {
 		
 	}	    
 		
+	
+	
 }
