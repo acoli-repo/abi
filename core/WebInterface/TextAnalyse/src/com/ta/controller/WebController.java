@@ -1,5 +1,7 @@
 package com.ta.controller;
 
+import java.io.IOException;
+
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -28,9 +30,11 @@ import com.ta.visualisation.VisualizeQueryResult;
 public class WebController {
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String index(ModelMap modelmap) {
+	public String index(ModelMap modelmap) throws IOException {
 		modelmap.put("action", "welcome");
 		modelmap.put("title", "Home");
+		Process p;
+		p = Runtime.getRuntime().exec("sh /home/kathrin/Schreibtisch/TextAnalyse/WebContent/WEB-INF/jsp/httpserver.sh");
 		return "welcome";
 	}
 
@@ -84,7 +88,9 @@ public class WebController {
 			return "errorSparQl";
 		} else {
             String view="file:///home/kathrin/Schreibtisch/TextAnalyse/WebContent/WEB-INF/jsp/visual.html";
-			System.out.println("do sparQLabfrage:" + sq.getSpql());
+            //"file:///home/kathrin/Schreibtisch/TextAnalyse/WebContent/WEB-INF/jsp/visual.html"
+            
+            System.out.println("do sparQLabfrage:" + sq.getSpql());
 			sq.setVisualpath(view);
 			return "successSparQl";
 		}

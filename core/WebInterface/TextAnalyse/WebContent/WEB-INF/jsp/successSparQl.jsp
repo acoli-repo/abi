@@ -102,7 +102,8 @@ textarea {
 							RDF Turtle  file  has been created: <br />
 							${ta.rdftriplefile}
 				
-							<a href="${ta.visualpath}" class="button">Start Visualization</a>
+							<!--<a href="${ta.visualpath}" class="button">Start Visualization</a>-->
+							<a href="http://127.0.0.1:8000" class="button">Start Visualization</a>
 						</div>
 					</div>
 				</div>
