@@ -52,10 +52,11 @@ td {
     width: 100%;
 }
 textarea {
-    width: 600px;
-    height: 300px;
+    width: 400px;
+    height: 100px;
     background-color : #C2CFCB;
     overflow-y: scroll;
+    overflow-x: scroll;
 }
 </style>
 
@@ -100,10 +101,11 @@ textarea {
 								<span>SparQL Turtle</span>
 							</h4>
 							RDF Turtle  file  has been created: <br />
-							${ta.rdftriplefile}
+							${ta.rdftriplefile} <br />
+							
 				
 							<!--<a href="${ta.visualpath}" class="button">Start Visualization</a>-->
-							<a href="http://127.0.0.1:8000" class="button">Start Visualization</a>
+							<a href="${ta.localhost}" class="button">Start Visualization</a>
 						</div>
 					</div>
 				</div>

@@ -2,5 +2,5 @@
 
 dir="/home/kathrin/Schreibtisch/TextAnalyse/WebContent/WEB-INF/jsp/"
 cd $dir
-python -m SimpleHTTPServer
+python -m SimpleHTTPServer 8080
 

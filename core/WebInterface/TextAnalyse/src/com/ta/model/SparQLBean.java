@@ -10,6 +10,16 @@ public class SparQLBean {
 	private String rdftriplefile;
 	
 	private String visualpath;
+	
+	private String localhost;
+	
+	public String getLocalhost(){
+		return localhost;
+	}
+	
+	public void setLocalhost(String localhost){
+		this.localhost = localhost;
+	}
 
 	public String getVisualpath() {
 		return visualpath;

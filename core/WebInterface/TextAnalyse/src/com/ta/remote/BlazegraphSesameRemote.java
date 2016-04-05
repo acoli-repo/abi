@@ -62,13 +62,18 @@ public class BlazegraphSesameRemote {
 
 	public static Logger log = Logger.getLogger(BlazegraphSesameRemote.class);
 	public static String serviceURL = "http://localhost:9999/bigdata";
-	protected static  RWProperties rwpp = new RWProperties();
+	protected static RWProperties rwpp = new RWProperties();
 
 	@SuppressWarnings("rawtypes")
-	public static String queryExecutionGraph(String query){
+	public static String queryExecutionGraph(String query) {
 
-		RemoteRepositoryManager repo = new RemoteRepositoryManager(serviceURL, false /* useLBS */);
-		String outputfile="";
+		rwpp.setPropValues("localhost", "http://localhost:9000/construct.html");
+		rwpp.writeProp("localhost", "http://localhost:9000/construct.html",
+				Globals._MESSAGE_PATH);
+
+		RemoteRepositoryManager repo = new RemoteRepositoryManager(serviceURL,
+				false /* useLBS */);
+		String outputfile = "";
 		try {
 
 			com.bigdata.rdf.sail.webapp.client.JettyResponseListener response = getStatus(repo);
@@ -84,15 +89,19 @@ public class BlazegraphSesameRemote {
 			properties.setProperty("foaf", FOAF.NAMESPACE);
 			properties.setProperty("terms", "http://purl.org/acoli/open-ie/");
 			properties.setProperty("owl", "http://www.w3.org/2002/07/owl#");
-			properties.setProperty("skos", "http://www.w3.org/2004/02/skos/core#");
+			properties.setProperty("skos",
+					"http://www.w3.org/2004/02/skos/core#");
 			properties.setProperty(":", "http://purl.org/acoli/open-ie/");
-			properties.setProperty("data", "http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#");
+			properties
+					.setProperty("data",
+							"http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#");
 			if (!namespaceExists(repo, namespace)) {
 				log.info(String.format("Create namespace %s...", namespace));
 				repo.createRepository(namespace, properties);
 				log.info(String.format("Create namespace %s done", namespace));
 			} else {
-				log.info(String.format("Namespace %s already exists", namespace));
+				log.info(String
+						.format("Namespace %s already exists", namespace));
 			}
 
 			// get properties for namespace
@@ -111,7 +120,8 @@ public class BlazegraphSesameRemote {
 			@SuppressWarnings("unused")
 			RDFWriter writer = Rio.createWriter(RDFFormat.TURTLE, System.out);
 
-			IPreparedGraphQuery r = repo.getRepositoryForNamespace("kb").prepareGraphQuery(query);
+			IPreparedGraphQuery r = repo.getRepositoryForNamespace("kb")
+					.prepareGraphQuery(query);
 			GraphQueryResult result1 = r.evaluate();
 
 			@SuppressWarnings("unchecked")
@@ -126,30 +136,35 @@ public class BlazegraphSesameRemote {
 					String o = st.getObject().toString();
 					String spo = "<" + s + ">\t<" + p + ">\t<" + o + ">.\n";
 					resultlist.add(spo);
-					System.out.print("<" + s + ">\t<" + p + ">\t<" + o + ">.\n");
+					System.out
+							.print("<" + s + ">\t<" + p + ">\t<" + o + ">.\n");
 
 				}
-		} finally {
-			result1.close();
-			
-		}
-				
-		    outputfile= rwpp.getPropValues(Globals._PATH_TO_CONVERTER) + "rdftriples.ttl";
+			} finally {
+				result1.close();
+
+			}
+
+			outputfile = rwpp.getPropValues(Globals._PATH_TO_CONVERTER)
+					+ "rdftriples.ttl";
 			FileWriter fwriter = new FileWriter(outputfile);
 			for (String str : resultlist) {
 				fwriter.write(str);
 			}
 			fwriter.close();
 			return outputfile;
-		} catch ( Exception e) {
-			outputfile=rwpp.getPropValues(Globals._PATH_TO_CONVERTER_ERROR);
+		} catch (Exception e) {
+			rwpp.writeProp("path_to_converter_error",
+					e.toString().replace("\n", "this_is_a_newline"),
+					Globals._MESSAGE_PATH);
 		} finally {
 			try {
 				repo.close();
 			} catch (Exception e) {
-				System.out.print("ERROR:"+e.getMessage());
+				System.out.print("ERROR:" + e.getMessage());
 			}
 		}
+
 		return outputfile;
 
 	}
@@ -157,8 +172,13 @@ public class BlazegraphSesameRemote {
 	@SuppressWarnings("rawtypes")
 	public static String queryExecutionTuple(String query) {
 
-		RemoteRepositoryManager repo = new RemoteRepositoryManager(serviceURL, false /* useLBS */);
-		String outputfile="";
+		rwpp.setPropValues("localhost", "http://localhost:9000/select.html");
+		rwpp.writeProp("localhost", "http://localhost:9000/select.html",
+				Globals._MESSAGE_PATH);
+
+		RemoteRepositoryManager repo = new RemoteRepositoryManager(serviceURL,
+				false /* useLBS */);
+		String outputfile = "";
 		try {
 
 			JettyResponseListener response = getStatus(repo);
@@ -174,15 +194,19 @@ public class BlazegraphSesameRemote {
 			properties.setProperty("foaf", FOAF.NAMESPACE);
 			properties.setProperty("terms", "http://purl.org/acoli/open-ie/");
 			properties.setProperty("owl", "http://www.w3.org/2002/07/owl#");
-			properties.setProperty("skos", "http://www.w3.org/2004/02/skos/core#");
+			properties.setProperty("skos",
+					"http://www.w3.org/2004/02/skos/core#");
 			properties.setProperty(":", "http://purl.org/acoli/open-ie/");
-			properties.setProperty("data", "http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#");
+			properties
+					.setProperty("data",
+							"http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#");
 			if (!namespaceExists(repo, namespace)) {
 				log.info(String.format("Create namespace %s...", namespace));
 				repo.createRepository(namespace, properties);
 				log.info(String.format("Create namespace %s done", namespace));
 			} else {
-				log.info(String.format("Namespace %s already exists", namespace));
+				log.info(String
+						.format("Namespace %s already exists", namespace));
 			}
 
 			// get properties for namespace
@@ -197,68 +221,87 @@ public class BlazegraphSesameRemote {
 			// String resource = "data.n3";
 			// loadDataFromResource(repo, namespace, resource);
 
-			// execute query
-			TupleQueryResult result = repo.getRepositoryForNamespace("kb")
-					.prepareTupleQuery("SELECT * {?s ?p ?o} LIMIT 10").evaluate();
-
 			@SuppressWarnings("unchecked")
 			List<String> resultlist = new ArrayList();
+
+			// get header
+			// execute query
+			TupleQueryResult result0 = repo.getRepositoryForNamespace("kb")
+					.prepareTupleQuery(query).evaluate();
+			BindingSet bs0 = result0.next();
+			Object[] arr0 = bs0.getBindingNames().toArray();
+			String header = "";
+			for (Object o : arr0) {
+				String k = o.toString();
+				header = header + k + ",";
+			}
+			header = header.substring(0, header.length() - 1);
+			resultlist.add(header + "\n");
+
+			// get results
+			// execute query
+			TupleQueryResult result = repo.getRepositoryForNamespace("kb")
+					.prepareTupleQuery(query).evaluate();
+
 			// result processing
 			try {
 				while (result.hasNext()) {
+					String resultline = "";
 					BindingSet bs = result.next();
 					log.info(bs);
-					@SuppressWarnings("unused")
-					String n = bs.getBindingNames().toString();
-					String o = bs.getValue("o").toString();
-					String s = bs.getValue("s").toString();
-					String p = bs.getValue("p").toString();
-					String spo = "<" + s + ">\t<" + p + ">\t<" + o + ">.\n";
-					resultlist.add(spo);
-					System.out.print("<" + s + ">\t<" + p + ">\t<" + o + ">.\n");
+					// System.out.println(bs.toString());
+					Object[] arr = bs.getBindingNames().toArray();
+
+					String lines = "";
+					for (Object object : arr) {
+						String attr = bs.getValue(object.toString()).toString();
+						if (attr.contains("^^")) {
+							attr = attr.split("\\^\\^")[0];
+						}
+						lines = lines + attr + ",";
+					}
+					if (lines != null && lines.length() > 0) {
+						lines = lines.substring(0, lines.length() - 1);
+					}
+
+					resultline = resultline + lines + "\n";
+					resultlist.add(resultline);
+
 				}
 			} finally {
 				result.close();
 			}
 
-//			PropertiesSesame props = new PropertiesSesame();
-//			Properties propsPipeline = props.loadProps();
-//			String path_to_java = rwpp.getPropValues(Globals._PATH_TO_JAVA);
-			outputfile=rwpp.getPropValues(Globals._PATH_TO_CONVERTER_ERROR);
-			outputfile = rwpp.getPropValues(Globals._PATH_TO_CONVERTER) + "rdftriples.ttl";
+			outputfile = Globals._PATH_TO_VISUALIZE + "triples.csv";
+
 			FileWriter fwriter = new FileWriter(outputfile);
-			System.out.print("test");
 			for (String str : resultlist) {
+				System.out.print(str);
 				fwriter.write(str);
 			}
 			fwriter.close();
 			return outputfile;
 
 		} catch (Exception e) {
-			outputfile=rwpp.getPropValues(Globals._PATH_TO_CONVERTER_ERROR);
+			rwpp.writeProp("path_to_converter_error",
+					e.toString().replace("\n", "this_is_a_newline"),
+					Globals._MESSAGE_PATH);
 		} finally {
 			try {
 				repo.close();
 			} catch (Exception e) {
-				System.out.print("ERROR:"+e.getMessage());
+				System.out.print("ERROR:" + e.getMessage());
 			}
 		}
 		return outputfile;
 
 	}
 
-	public static String decideQueryType(String query) {
-		if (query.toUpperCase().contains("SELECT")) {
-				return queryExecutionTuple(query);
-		} else {
-				return queryExecutionGraph(query);
-		}
-	}
-
 	/*
 	 * Status request.
 	 */
-	public static JettyResponseListener getStatus(final RemoteRepositoryManager repo) throws Exception {
+	public static JettyResponseListener getStatus(
+			final RemoteRepositoryManager repo) throws Exception {
 
 		ConnectOptions opts = new ConnectOptions(serviceURL + "/status");
 		opts.method = "GET";
@@ -269,13 +312,15 @@ public class BlazegraphSesameRemote {
 	/*
 	 * Check namespace already exists.
 	 */
-	public static boolean namespaceExists(RemoteRepositoryManager repo, String namespace) throws Exception {
+	public static boolean namespaceExists(RemoteRepositoryManager repo,
+			String namespace) throws Exception {
 
 		GraphQueryResult res = repo.getRepositoryDescriptions();
 		try {
 			while (res.hasNext()) {
 				Statement stmt = res.next();
-				if (stmt.getPredicate().toString().equals(SD.KB_NAMESPACE.stringValue())) {
+				if (stmt.getPredicate().toString()
+						.equals(SD.KB_NAMESPACE.stringValue())) {
 					if (namespace.equals(stmt.getObject().stringValue())) {
 						return true;
 					}
@@ -290,10 +335,11 @@ public class BlazegraphSesameRemote {
 	/*
 	 * Get namespace properties.
 	 */
-	public static JettyResponseListener getNamespaceProperties(RemoteRepositoryManager repo, String namespace)
-			throws Exception {
+	public static JettyResponseListener getNamespaceProperties(
+			RemoteRepositoryManager repo, String namespace) throws Exception {
 
-		ConnectOptions opts = new ConnectOptions(serviceURL + "/namespace/" + namespace + "/properties");
+		ConnectOptions opts = new ConnectOptions(serviceURL + "/namespace/"
+				+ namespace + "/properties");
 		opts.method = "GET";
 		return repo.doConnect(opts);
 
@@ -302,48 +348,66 @@ public class BlazegraphSesameRemote {
 	/*
 	 * Load data into a namespace.
 	 */
-	public static void loadDataFromResource(RemoteRepositoryManager repo, String namespace, String resource)
-			throws Exception {
+	public static void loadDataFromResource(RemoteRepositoryManager repo,
+			String namespace, String resource) throws Exception {
 
-		// File f = new
-		// File("/home/kathrin/workspace/sample-sesame-remote/src/main/resources/data.n3");
-		// InputStream is = new
-		// FileInputStream("/home/kathrin/workspace/sample-sesame-remote/src/main/resources/data.n3");
-		InputStream is = BlazegraphSesameRemote.class.getResourceAsStream(resource);
+		InputStream is = BlazegraphSesameRemote.class
+				.getResourceAsStream(resource);
 
 		if (is == null) {
 			throw new IOException("Could not locate resource: " + resource);
 		}
 		try {
 			;
-			repo.getRepositoryForNamespace(namespace).add(new RemoteRepository.AddOp(is, RDFFormat.TURTLE));
+			repo.getRepositoryForNamespace(namespace).add(
+					new RemoteRepository.AddOp(is, RDFFormat.TURTLE));
 		} finally {
 			is.close();
 		}
 	}
 
-	public static void main(String[] args) throws Exception {
-		String q = "PREFIX text: <http://purl.org/acoli/open-ie/acoli.in2rdf.Sentence2Triple/16787226#>" + "\n"
-				+ "PREFIX tbox: <http://purl.org/acoli/open-ie/>" + "\n"
-				+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" + "\n"
-				+ " PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" + "\n"
-				+ " CONSTRUCT { ?aC ?r ?bC. ?bC ?s ?aC. ?cC ?t ?bC. ?bC ?u ?cC }" + "\n" + " WHERE { "
-				+ " ?a ?ign ?c. ?c a ?cC. ?a a ?aC." + " { ?a a tbox:king } UNION { ?c a tbox:king}."
-				+ " {{ ?a ?r ?b } UNION { ?b ?s ?a}. ?b a ?bC.} UNION " + " {{ ?c ?t ?b } UNION { ?b ?u ?c}. ?b a ?bC.}"
-				+ " }";
+	public static String decideQueryType(String query) throws IOException {
+		if (query.toUpperCase().contains("SELECT")) {
+			String rdftriplefile = queryExecutionTuple(query);
+			System.out.println(rdftriplefile);
+			VisualizeQueryResult vqr = new VisualizeQueryResult();
+			vqr.visualizeSelect(rdftriplefile);
+			return rdftriplefile;
+		} else {
+			String rdftriplefile = queryExecutionGraph(query);
+			System.out.println(rdftriplefile);
+			VisualizeQueryResult vqr = new VisualizeQueryResult();
+			vqr.visualizeTriple(rdftriplefile);
+			return rdftriplefile;
 
-		String rdftriplefile = decideQueryType(q);
-		System.out.println(rdftriplefile);
-		// String rdftriplefile = queryExecutionGraph(q);
-		VisualizeQueryResult vqr = new VisualizeQueryResult();
-		vqr.visualizeTriple(rdftriplefile);
-		
-//        System.out.println(rdftriplefile);
-//		String q1 = "SELECT * {?s ?p ?o} LIMIT 10";
-//		String rdftriplefile1 = decideQueryType(q1);
-//		// String rdftriplefile1 = queryExecutionTuple(q1);
-//		VisualizeQueryResult vqr1 = new VisualizeQueryResult();
-//		vqr1.visualizeTriple(rdftriplefile1);
+			// return queryExecutionGraph(query);
+		}
+	}
+
+	public static void main(String[] args) throws Exception {
+		String q = "PREFIX text: <http://purl.org/acoli/open-ie/acoli.in2rdf.Sentence2Triple/16787226#>"
+				+ "\n"
+				+ "PREFIX tbox: <http://purl.org/acoli/open-ie/>"
+				+ "\n"
+				+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
+				+ "\n"
+				+ " PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
+				+ "\n"
+				+ " CONSTRUCT { ?aC ?r ?bC. ?bC ?s ?aC. ?cC ?t ?bC. ?bC ?u ?cC }"
+				+ "\n"
+				+ " WHERE { "
+				+ " ?a ?ign ?c. ?c a ?cC. ?a a ?aC."
+				+ " { ?a a tbox:king } UNION { ?c a tbox:king}."
+				+ " {{ ?a ?r ?b } UNION { ?b ?s ?a}. ?b a ?bC.} UNION "
+				+ " {{ ?c ?t ?b } UNION { ?b ?u ?c}. ?b a ?bC.}" + " ";
+
+		// String rdftriplefile = decideQueryType(q);
+		decideQueryType(q);
+
+		String p = "select (count(*) as ?count) where { }";
+		decideQueryType(p);
+		String r = "SELECT ?t ?r {?t ?q ?r} LIMIT ";
+		decideQueryType(r);
 
 	}
 }

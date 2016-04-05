@@ -24,22 +24,22 @@ import com.ta.resource.Globals;
  * author: 
  * 
  */
-import com.ta.visualisation.VisualizeQueryResult;
 
 @Controller
 public class WebController {
 
+	protected static RWProperties rwpp = new RWProperties();
+
 	@RequestMapping(method = RequestMethod.GET)
-	public String index(ModelMap modelmap) throws IOException {
+	public String index(ModelMap modelmap) throws IOException,
+			InterruptedException {
 		modelmap.put("action", "welcome");
 		modelmap.put("title", "Home");
-		Process p;
-		p = Runtime.getRuntime().exec("sh /home/kathrin/Schreibtisch/TextAnalyse/WebContent/WEB-INF/jsp/httpserver.sh");
 		return "welcome";
 	}
 
 	@RequestMapping("/about")
-	public ModelAndView about() {
+	public ModelAndView about() throws IOException {
 		return new ModelAndView("about", "message", null);
 	}
 
@@ -54,16 +54,19 @@ public class WebController {
 	}
 
 	@RequestMapping("/textAnalyse")
-	public ModelAndView textAnalyse() {
-
+	public ModelAndView textAnalyse() throws IOException {
+		ProcessBuilder pb1 = new ProcessBuilder("sh",
+				Globals._PATH_TO_VISUALIZE + "httpserverConstructSelect.sh",
+				Globals._PATH_TO_VISUALIZE);
+		pb1.start();
 		return new ModelAndView("textAnalyse", "ta", new SparQLBean());
 	}
 
 	@SuppressWarnings("static-access")
 	@RequestMapping("/successSparQl")
-	public String processForm(@Valid @ModelAttribute("ta") SparQLBean sq, BindingResult result) {
+	public String processForm(@Valid @ModelAttribute("ta") SparQLBean sq,
+			BindingResult result) throws IOException {
 
-		//RWProperties rwp = new RWProperties();
 		CheckFile cf = new CheckFile();
 
 		BlazegraphSesameRemote bgsr = new BlazegraphSesameRemote();
@@ -73,38 +76,35 @@ public class WebController {
 		rdftriplefile = bgsr.decideQueryType(sq.getSpql());
 		sq.setRdftriplefile(rdftriplefile);
 
-		VisualizeQueryResult vqr = new VisualizeQueryResult();
-		vqr.visualizeTriple(rdftriplefile);
-//		vqr. visualizeTriple("/home/kathrin/Schreibtisch/TextAnalyse/src/com/ta/converters/rdftriples.ttl");
-		
 		if (result.hasErrors()) {
 
 			return "textAnalyse";
-			
-		}
-		
-		if (cf.isOutputSucessed(rdftriplefile) == false) {
 
+		}
+
+		String localhost = rwpp.getPropValues("localhost");
+		sq.setLocalhost(localhost);
+
+		if (cf.isOutputSucessed(rdftriplefile) == false) {
+			sq.setRdftriplefile(rwpp.getPropValues("path_to_converter_error")
+					.replace("this_is_a_newline", "\n"));
 			return "errorSparQl";
 		} else {
-            String view="file:///home/kathrin/Schreibtisch/TextAnalyse/WebContent/WEB-INF/jsp/visual.html";
-            //"file:///home/kathrin/Schreibtisch/TextAnalyse/WebContent/WEB-INF/jsp/visual.html"
-            
-            System.out.println("do sparQLabfrage:" + sq.getSpql());
-			sq.setVisualpath(view);
+			System.out.println("do sparQLabfrage:" + sq.getSpql());
 			return "successSparQl";
 		}
 	}
 
 	@RequestMapping("/visual")
-	public String processForm2(@Valid @ModelAttribute("ta") SparQLBean sq, BindingResult result) {
-//		if (result.hasErrors()) {
-//			
-//			return "successSparQl";
-//		} else {
+	public String processForm2(@Valid @ModelAttribute("ta") SparQLBean sq,
+			BindingResult result) {
+		// if (result.hasErrors()) {
+		//
+		// return "successSparQl";
+		// } else {
 
-			return "visual";
-//		}
+		return "visual";
+		// }
 	}
 
 	@RequestMapping("/login")
@@ -113,8 +113,9 @@ public class WebController {
 	}
 
 	@RequestMapping("/verwaltung")
-	public String processLoginForm(@Valid @ModelAttribute("logindata") LoginData ld, BindingResult result,
-			Model model) {
+	public String processLoginForm(
+			@Valid @ModelAttribute("logindata") LoginData ld,
+			BindingResult result, Model model) {
 		if (result.hasErrors() || !ld.getUsername().equals(Globals.USER_NAME)
 				|| !ld.getPassword().equals(Globals.PASS_WORT)) {
 			return "login";
@@ -126,7 +127,8 @@ public class WebController {
 			pp.setHtmlclasspath(rwp.getPropValues("htmlclasspath"));
 			pp.setOutputtextclasspath(rwp.getPropValues("outputtextclasspath"));
 			pp.setOutputrdfclasspath(rwp.getPropValues("outputrdfclasspath"));
-			pp.setOutputturtleclasspath(rwp.getPropValues("outputturtleclasspath"));
+			pp.setOutputturtleclasspath(rwp
+					.getPropValues("outputturtleclasspath"));
 
 			model.addAttribute("pipeline", pp);
 			return "verwaltung";
@@ -134,7 +136,9 @@ public class WebController {
 	}
 
 	@RequestMapping("/successSave")
-	public String processPipileForm(@Valid @ModelAttribute("pipeline") PipelineSet ps, BindingResult result) {
+	public String processPipileForm(
+			@Valid @ModelAttribute("pipeline") PipelineSet ps,
+			BindingResult result) {
 		RWProperties rwp = new RWProperties();
 
 		if (result.hasErrors()) {
@@ -145,9 +149,11 @@ public class WebController {
 			rwp.setPropValues("sprache", ps.getSprache());
 			rwp.setPropValues("pdfclasspath", ps.getPdfclasspath());
 			rwp.setPropValues("htmlclasspath", ps.getHtmlclasspath());
-			rwp.setPropValues("outputtextclasspath", ps.getOutputtextclasspath());
+			rwp.setPropValues("outputtextclasspath",
+					ps.getOutputtextclasspath());
 			rwp.setPropValues("outputrdfclasspath", ps.getOutputrdfclasspath());
-			rwp.setPropValues("outputturtleclasspath", ps.getOutputturtleclasspath());
+			rwp.setPropValues("outputturtleclasspath",
+					ps.getOutputturtleclasspath());
 
 			return "successSave";
 		}

@@ -52,10 +52,11 @@ td {
     width: 100%;
 }
 textarea {
-    width: 600px;
+    width: 400px;
     height: 100px;
     background-color : #C2CFCB;
     overflow-y: scroll;
+    overflow-x: scroll;
 }
 </style>
 

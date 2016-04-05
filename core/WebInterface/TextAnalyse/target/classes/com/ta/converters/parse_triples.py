@@ -8,7 +8,6 @@ import re
 import collections
 
 
-
 def prefix_replace(i):
     '''replace the prefixes; Kathrin und Andy'''
     pattern = re.compile("<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/"+"[0-9]")
@@ -185,4 +184,5 @@ print 'JSON color output successfully generated.'
 # Print word frequencies
 #for e, c in sorted(entities.items(), key=lambda x:x[1]):
 #    print e, c
+
 

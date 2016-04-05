@@ -15,6 +15,8 @@ public interface Globals {
 	public final static String _MESSAGE_PATH= "/home/kathrin/Schreibtisch/TextAnalyse/src/com/ta/resource/messages.properties";
 	
 	public final static String _OUTPUT_PATH= "/home/kathrin/Schreibtisch/TextAnalyse/src/com/ta/resource/demo.txt";
+		
+	public final static String _PATH_TO_VISUALIZE = "/home/kathrin/Schreibtisch/TextAnalyse/WebContent/WEB-INF/jsp/visualize/";
 	
 	public final static String _PATH_TO_JAVA="path_to_java";
 	
@@ -26,4 +28,6 @@ public interface Globals {
 	
 	//error
 	public final static String _PATH_TO_CONVERTER_ERROR="path_to_converters_error";
+	
+	public final static String _LOCALHOST="localhost";
 }

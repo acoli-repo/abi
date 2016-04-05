@@ -1,0 +1,11 @@
+<http://purl.org/acoli/open-ie/ticket>	<http://purl.org/acoli/open-ie/do_at>	<http://purl.org/acoli/open-ie/time>.
+<http://purl.org/acoli/open-ie/election>	<http://purl.org/acoli/open-ie/do_at>	<http://purl.org/acoli/open-ie/time>.
+<http://purl.org/acoli/open-ie/population>	<http://purl.org/acoli/open-ie/do_at>	<http://purl.org/acoli/open-ie/time>.
+<http://purl.org/acoli/open-ie/time>	<http://purl.org/acoli/open-ie/at_do>	<http://purl.org/acoli/open-ie/trump>.
+<http://purl.org/acoli/open-ie/time>	<http://purl.org/acoli/open-ie/at_do>	<http://purl.org/acoli/open-ie/energize>.
+<http://purl.org/acoli/open-ie/time>	<http://purl.org/acoli/open-ie/at_do>	<http://purl.org/acoli/open-ie/force>.
+<http://purl.org/acoli/open-ie/time>	<http://purl.org/acoli/open-ie/at_do>	<http://purl.org/acoli/open-ie/absence>.
+<http://purl.org/acoli/open-ie/time>	<http://purl.org/acoli/open-ie/at_do>	<http://purl.org/acoli/open-ie/turnout>.
+<http://purl.org/acoli/open-ie/time>	<http://purl.org/acoli/open-ie/at_do>	<http://purl.org/acoli/open-ie/offlimit>.
+<http://purl.org/acoli/open-ie/time>	<http://purl.org/acoli/open-ie/at_do>	<http://purl.org/acoli/open-ie/state>.
+<http://purl.org/acoli/open-ie/unpredictability>	<http://purl.org/acoli/open-ie/of>	<http://purl.org/acoli/open-ie/trump>.

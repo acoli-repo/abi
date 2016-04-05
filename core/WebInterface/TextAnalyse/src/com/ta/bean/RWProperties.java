@@ -6,6 +6,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
@@ -40,6 +42,21 @@ public class RWProperties {
 			}
 		}
 		return result;
+	}
+	
+	public void writeProp(String k, String v, String filepath){	
+        readwriteFiles wf = new readwriteFiles();
+		List<String> lines = wf.read(filepath);
+		List<String> final_lines = new ArrayList<String>();
+		for(String l:lines){
+			if (l.split("=")[0].equals(k)){
+				final_lines.add(k+"="+v+"\n");
+			}
+			else{
+				final_lines.add(l+"\n");
+			}
+		}     
+        wf.write(filepath, final_lines);
 	}
 
 	public boolean getBtnPropValues(String key) {
