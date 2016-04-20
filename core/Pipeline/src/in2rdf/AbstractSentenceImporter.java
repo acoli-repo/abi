@@ -1,3 +1,10 @@
+/*  **************************************************************
+ *   Autor(en)       : Christian Chiarcos,  Kathrin Donandt, Zhanhong Huang
+ *  --------------------------------------------------------------
+ *   copyright (c) 2016  Uni Frankfurt Informatik
+ *   Alle Rechte vorbehalten.
+ *  **************************************************************
+ */
 package in2rdf;
 
 import java.io.BufferedReader;
@@ -6,16 +13,12 @@ import java.io.Reader;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.Writer;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
-import java.util.regex.Pattern;
 
 /**import acoli.nlp.Lemmatizer;*/
 
@@ -32,6 +35,7 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
  * </ul> 
  * subclasses have to implement annotation-/language-specific extraction routines
  * */ 
+
 public abstract class AbstractSentenceImporter extends AbstractImporter{
 
 	/** for lemmatization */
@@ -78,11 +82,20 @@ public abstract class AbstractSentenceImporter extends AbstractImporter{
     	
     }
 
-    protected String getId(String fields[][], Integer p, int sentenceNr)
+    protected String getId(String fields[][], Integer p, int sentenceNr, String language)
     {
+    	
+    	
 		String label = fields[p.intValue()][lem].trim();
 		if(label.contains("@")) label=fields[p][word].trim();
+		if(language.equals("en")){
 		label = deAccent(label).replaceAll("[^a-zA-Z0-9]+", " ").trim().replaceAll(" ", "_");
+		}
+		else{
+			label = deAccent(label).replaceAll("[^a-zA-Z0-9öäüßÄÖÜ]+", " ").trim().replaceAll(" ", "_");			
+		}
+		
+		
 		label=p+"_"+label;
         if(p<10) label="00"+label;
 		else if(p<100) label = "0"+label;
@@ -90,10 +103,10 @@ public abstract class AbstractSentenceImporter extends AbstractImporter{
     }
 
 	/** use the first element in positions to determine the id. This means we loose some information, however ! */
-    protected String getId(String fields[][], List<Integer> positions, int sentenceNr) {
+    protected String getId(String fields[][], List<Integer> positions, int sentenceNr, String language) {
 		if(positions==null) 		return null;
         if(positions.size() == 0)	return null;
-        if(positions.size() == 1)	return getId(fields, positions.get(0), sentenceNr);
+        if(positions.size() == 1)	return getId(fields, positions.get(0), sentenceNr, language);
 		
 		// reduce to (first) head 
 		Integer headCandidate = null;
@@ -104,7 +117,7 @@ public abstract class AbstractSentenceImporter extends AbstractImporter{
                 if(!positions.contains(h))
                     if(headCandidate == null) {
                         headCandidate = p;
-						return getId(fields, headCandidate, sentenceNr);
+						return getId(fields, headCandidate, sentenceNr, language);
                     } else
                         headCandidate = -1;
             }
@@ -114,8 +127,14 @@ public abstract class AbstractSentenceImporter extends AbstractImporter{
 		return null; // doesn't happen
     }
 
-	protected String getTerm(String[][] fields, int i) {
-		return ":"+deAccent(fields[i][lem]).toLowerCase().replaceAll("[^a-zA-Z0-9]+"," ").trim().replaceAll(" ","_").replaceFirst("^([0-9])","_$1");
+	protected String getTerm(String language ,String[][] fields, int i) {
+
+		if (language.equals("en")){
+			return ":"+deAccent(fields[i][lem]).toLowerCase().replaceAll("[^a-zA-Z0-9]+"," ").trim().replaceAll(" ","_").replaceFirst("^([0-9])","_$1");
+
+		}else{
+			return ":"+deAccent(fields[i][lem]).replaceAll("[^a-zA-Z0-9äöüßÄÜÖ]+"," ").trim().replaceAll(" ","_").replaceFirst("^([0-9])","_$1");
+				}
 	}
 
 	/** this is specific to a given annotation scheme, hence to be specified by the particular extractor */

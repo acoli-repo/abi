@@ -1,3 +1,10 @@
+/*  **************************************************************
+ *   Autor(en)       : Christian Chiarcos
+ *  --------------------------------------------------------------
+ *   copyright (c) 2016  Uni Frankfurt Informatik
+ *   Alle Rechte vorbehalten.
+ *  **************************************************************
+ */
 package in2rdf;
 
 import java.io.IOException;
@@ -5,8 +12,6 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.net.URISyntaxException;
-import java.text.Normalizer;
-import java.util.Hashtable;
 import java.util.regex.Pattern;
 import com.hp.hpl.jena.rdf.model.*;
 
@@ -78,8 +83,9 @@ public abstract class AbstractImporter {
 	}
 	
 	public static String deAccent(String str) {
-		String nfdNormalizedString = Normalizer.normalize(str, Normalizer.Form.NFD); 
-		return diacritics.matcher(nfdNormalizedString).replaceAll("");
+		//String nfdNormalizedString = Normalizer.normalize(str, Normalizer.Form.NFD); 
+		//return diacritics.matcher(nfdNormalizedString).replaceAll("");
+		return str;
 	}
 
 	/** if s is not yet a full URI or preceded by a registered namespace prefix, put it in the default namespace */

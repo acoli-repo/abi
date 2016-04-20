@@ -1,0 +1,228 @@
+==============
+Documentation 
+==============
+
+Das Projekt untegliedert sich in zwei Unterprojekt: der NLP-Pipeline und dem Webinterface für SparQL-Anfragen.
+Es wurde auf Eclipse Luna entwickelt, mit der Java Version 1.8 (????)
+
+Inhalt:
+I) NLP-Pipeline
+    A) Ordnerstruktur des Quellcodes
+    B) Ablauf der Pipeline
+    C) Externe Ressourcen
+    D) Java-Bibliotheken
+    E) Nutzung der Pipeline
+II) Webinterface
+    A) Ordnerstruktur des Quellcodes
+    B) Pakete - Funktion
+    C) Externe Ressourcen (blazegraph...)
+III) Konfiguration
+
+
+
+
+====================
+I) Die NLP-Pipeline
+====================
+
+
+
+A) Ordnerstruktur des Quellcodes
+================================
+
+
+Pipeline -- | -- bin -- ...
+            | -- lib ...
+            | -- localFiles ------- | -- inputPipeline -----| -- en ------------ | filePool
+            |                       |                       |                    | html
+            |                       |                       |                    | pdf
+            |                       |
+            |                       |                       | -- de ------------ | filePool
+            |                       |                                            | html
+            |                       |                                            | pdf
+            |                       |
+            |                       | -- outputPipeline ----| -- en ------------ | xml	
+            |                                                                    | txtPreprocessed
+            |                                                                    | txt
+            |                                                                    | sentences
+            |                                                                    | mate
+            |                                                                    | rdf
+            |                                                                    | nquads
+            |                                                | -- de ----------- | xml	
+            |                                                                    | txtPreprocessed
+            |                                                                    | txt
+            |                                                                    | sentences
+            |                                                                    | mate
+            |                                                                    | rdf
+            |                                                                    | nquads
+            | -- src -------------- | -- helper 
+                                    | -- html2txt 
+                                    | -- in2rdf ----------- | -- rdfconvert-0.4 ...
+                                    | -- mate ------------- | -- models ---      | english
+                                                                                 | german
+                                    | -- pipeline
+                                    | -- properties
+                                    | -- sbd -------------- | -- splitta ...
+                                    | -- xml2plaintxt
+                                    | -- pdf2xml
+
+
+B) Ablauf der Pipeline
+======================
+I. Herausfiltern des Textes
+1. pdf Dateien: zunächst wird anhand von pdf2xml [1] der Text der pdf-Eingabedateien in xml-Format erhalten (Pipeline/src/pdf2xml_own/pdf2xml.java). 
+Dieses XML-Dokument enhält detaillierte Angaben über den herausgefilterten Text (Schriftgröße, Position, etc.). 
+Aus den xml-Dateien wird anhand eines XSLT-Skripts (Pipeline/src/xml2plaintxt/xslFile.xsl) der relevante Text als plain text erhalten 
+(als relevante Token wurden solche erachtet, deren Schriftgröße im Dokument am häufigsten vorkommt). 
+Da pdf2xml Schwierigkeiten mit Umlauten und sonstigen Sonderzeichen hat, wird der erhaltene Text (im txtPreprocessed Ordner) noch einmal durch ein Java-Skript [2] korrigiert 
+(Pipeline/src/xml2plaintxt/removeSpecialChars.java).
+2. html Dateien: die Klasse Pipeline/src/html2txt/HtmlExtraction.java filtert den relevanten Text anhand von tag-Bezeichnungen aus den html-Eingabedateien heraus ("article" oder "p").
+
+II. Sentence Boundary Detection
+Anhand von splitta [3] werden die nach I. erhaltenen plain text Dateien so transformiert, dass jeder Satz in einer separaten Zeile steht (Pipeline/src/sbd/SBD.java).
+
+III. Mate
+Das Mate-Tools (/Pipeline/src/mate/mateEnglishGerman.java), welches - leicht abgeändert, um mehrere Dateien verarbeiten zu könnnen - wurde als in eine jar Datei umgewandelt und in das Projekt Pipeline importiert (liegt in lib). Mit dem Mate-Tool werden die Sätze aus II. annotiert und im mate-Format (CONLL 2009) abgespeichert.
+
+IV. RDF Extraction
+Aus den mate-Dateien werden dann die rdf-Triple extrahiert, wobei die Klasse /Pipeline/src/in2rdf/Sentence2Triple.java [4] verwendet wird. Die rdf-Triple liegen dann im Turtle Format vor. Mithilfe des RDF-Konvertierers rdfconvert-0.4 [5] (s. Funktion "turtle2nquads" in /Pipeline/src/in2rdf/Sentence2Triples.java) werden diese Turle Dateien dann in das Nquad-Format umgewandelt. 
+
+
+
+C) Externe Ressourcen
+=====================
+Folgende Programme müssen installiert sein:
+- Python 2.7
+- Java 1.7
+- xmllint (http://xmlsoft.org/xmllint.html) (unter Windows: cgwin)
+
+Folgende externe Programme müssen ins Projekt eingefügt werden:
+
+Programm		                |       Zielornder              |		Quelle
+==============================================================================================================================================
+pdf2xml                                 |  Pipeline/src/pdf2xml_own/    | https://sourceforge.net/projects/pdf2xml/
+----------------------------------------------------------------------------------------------------------------------------------------------
+splitta                                 |  Pipeline/src/sbd/            | https://pypi.python.org/pypi/splitta/0.1.0
+----------------------------------------------------------------------------------------------------------------------------------------------
+mate tool                               | als Jar in Build Path         | https://storage.googleapis.com/google-code-archive-source/
+                                        |                               | v2/code.google.com/mate-tools/source-archive.zip (wurde 
+                                        |                               | aber abgeändert!!! Bei bedarf, bitte an uns wenden)
+----------------------------------------------------------------------------------------------------------------------------------------------
+mate POS, Lemma, Morph. Deutsch         | mate/models/german/(extracted)| https://storage.googleapis.com/google-code-archive-downloads/v2/
+                                        |                               | code.google.com/mate-tools/ger-tagger+lemmatizer+morphology+graph-
+                                        |                               | based-3.6+.tgz 					
+---------------------------------------------------------------------------------------------------------------------------------------------- 
+mate SRL Deutsch                        | mate/models/german/(extracted)| https://storage.googleapis.com/google-code-archive-downloads/v2/
+                                        |                               | code.google.com/mate-tools/tiger-complete-predsonly
+                                        |                               | -srl-4.11.srl.model
+----------------------------------------------------------------------------------------------------------------------------------------------
+mate POS Englisch                       | mate/models/english/          | https://storage.googleapis.com/google-code-archive-downloads/v2/
+                                        |                               | code.google.com/mate-tools/CoNLL2009-ST-English-
+                                        |                               | ALL.anna-3.3.postagger.model
+----------------------------------------------------------------------------------------------------------------------------------------------
+mate Lemma English                      | mate/models/english/          | https://storage.googleapis.com/google-code-archive-downloads/v2/
+                                        |                               | code.google.com/mate-tools/CoNLL2009-ST-English-
+                                        |                               | ALL.anna-3.3.lemmatizer.model
+----------------------------------------------------------------------------------------------------------------------------------------------
+mate Parser English                     | mate/models/english/          | https://storage.googleapis.com/google-code-archive-downloads/v2/
+                                        |                               | code.google.com/mate-tools/CoNLL2009-ST-English-
+                                        |                               | ALL.anna-3.3.parser.model
+----------------------------------------------------------------------------------------------------------------------------------------------
+mate SRL English                        | mate/models/english/          | https://storage.googleapis.com/google-code-archive-downloads/v2
+                                        |                               | /code.google.com/mate-tools/CoNLL2009-ST-English-
+                                        |                               | ALL.anna-3.3.srl-4.1.srl.model
+----------------------------------------------------------------------------------------------------------------------------------------------
+RDF Converter (ttl to nq)               | src/in2rdf/rdfconvert-0.4     | https://sourceforge.net/projects/rdfconvert/?source=typ_redirect
+==============================================================================================================================================
+
+D) Java-Bibliotheken
+====================
+- args4j-2.0.16.jar
+- itextpdf-5.1.0.jar
+- jcai-xml-0.17.2.jar
+- jena-2.5.5.jar
+- jsoup-1.8.3.jar
+- loci_tools.jar
+- org.apache.commons.io.jar
+- pdfbox-1.2.0.jar
+
+
+E) Nutzung der Pipeline
+=======================
+Zunächst müssen die Pfade in der properties Datei (example.properties unter src/properties/) angepasst werden. Nachdem die Komponenten aus C und D installiert wurden, kann die Pipeline durch Ausführen von src/pipeline/Pipeline.java als JavaApplication gestartet werden. Als Parameter für die "run"-Funktion, die die Pipeline letztendlich startet, müssen in der main-Methode noch der absolute Pfad der properties Datei (example.properties in src/properties/) und die Sprache ("en" oder "de") angepasst werden:
+
+public static void main(String[] args) {
+		String propsfile = "/home/kathrin/Dokumente/Pipeline/src/properties/example1.properties";
+		String input = "de";
+		run(propsfile, input);
+}
+
+Es liegt auch eine executable Jar Datei von Pipeline vor, die vom Webinterface TextAnalse benutzt wird. Sie wird wie folgt ausgeführt:
+
+java -Xmx3g -jar pipeline.jar example.properties en
+
+Das letzte Argument ist dabei die Sprachauswahl (en oder de).
+
+
+
+
+=====================
+II) Das Webinterface
+=====================
+
+A) Ordnerstruktur des Quellcodes
+=================================
+
+TODO
+
+
+
+B) Pakete - Funktion
+=================================
+
+...
+
+
+- src/com/ta/converters
+    Enthält das python Skript parse_triples.py [6]. Dieses transformiert das Ergebnis der SparQL Anfrage (das in rdftriples.ttl gespeichert 
+    wird) in eine .json Datei (triples.json unter /WebContent/WEB-INF/jsp/visualize). triples.json wird wiederum durch triples.vis 
+    visualisiert.
+
+
+- /WebContent/WEB-INF/jsp/visualize
+    Eine construct Anfrage erzeugt rdf Triples. Diese werden in eine .json Datei umgewandelt und durch triples.vis visualisiert  
+    (construct.html [6]). Eine select Anfrage erzeugt eine Tabelle. Diese wird direkt nach Auführung der Anfrage (src/com/ta/remote/
+    BlazegraphSesameRemote.java) unter /WebContent/WEB-INF/jsp/visualize/triples.csv gespeichert und mithilfe von d3.v3.min.js [7] 
+    visualisiert (select.html). 
+
+- /WebContent/SimpleHTTPServerWithUpload.py , upload.sh, download.sh
+    Eine abgeänderte Version von [8]. Dieses python Skript dient dazu, dass der/die UserIn lokale .pdf und html. Dateien auf den Server  
+    hochladen kann, um diese durch die Pipeline laufen zu lassen, die daraus Nquads Dateien erzeugt. Das Skript erhält weiterhin die Funktion, 
+    die Pipeline über die Weboberfläche zu starten. Dies geschieht mithilfe von upload.sh, welche die jar. Datei der Pipeline aufruft. Die .nq 
+    Dateien, die die Pipeline erzeugt, werden automatisch in /WebContent/nquads kopiert. download.sh startet einen SimpleHTTPServer (python) 
+    in diesem Ordner, um die darin enthaltenen Dateien für den/die UserIn sichtbar zu machen und das Herunterladen davon zu ermöglichen. 
+   
+
+
+    
+
+
+ 
+
+
+
+
+
+
+_____________________________
+
+[1] https://sourceforge.net/projects/pdf2xml/
+[2] Autor: Niko Schenk
+[3] https://pypi.python.org/pypi/splitta/0.1.0
+[4] Autor: Christian Chiarcos; abgeändert für Umlaute und Umwandlung in nquad
+[5] Autor: Samuel Rönnqvist; abgeändert, sodass Turtle-Präfixe nicht beachtet werden
+[6] Autor: Samuel Rönnqvist
+[7] https://bl.ocks.org/ndarville/7075823 
+[8] https://gist.github.com/UniIsland/3346170
+
+

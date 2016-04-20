@@ -1,9 +1,16 @@
+/*  **************************************************************
+ *   Autor(en)       : Niko Schenk
+ *  --------------------------------------------------------------
+ *   copyright (c) 2016  Uni Frankfurt Informatik
+ *   Alle Rechte vorbehalten.
+ *  **************************************************************
+ */
 package xml2plaintxt;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import Helper.listFiles;
-import Helper.readwriteFiles;
+import helper.listFiles;
+import helper.readwriteFiles;
 
 public class removeSpecialChars {
 	//the pdf2xml converter has some difficulties with special characters;

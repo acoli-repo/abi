@@ -1,4 +1,5 @@
 Manifest-Version: 1.0
+Main-Class: pipeline.Pipeline
 Export-Package: org.apache.pdfbox;uses:="org.apache.pdfbox.pdfparser,o
  rg.apache.pdfbox.exceptions,org.apache.pdfbox.cos,org.apache.pdfbox.u
  til,org.apache.pdfbox.pdmodel.common,org.apache.pdfbox.pdfwriter,org.
