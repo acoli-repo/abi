@@ -578,7 +578,7 @@ ol li .send {
 .login-help {
   margin: 20px 0;
   font-size: 20px;
-  color: #f3f3f3;
+  color: black; 
   text-align: center;
   text-shadow: 0 1px #f3f3f3;
 }

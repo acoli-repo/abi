@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Text Analytics | Text Analyse</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="/resources/style.css" />
+
+<link src="/resources/js/cufon-yui.js" var="cufon-yui" />
+
+<link src="/resources/js/georgia.js" var="georgia" />
+
+<link src="/resources/js/cuf_run.js" var="cuf_run" />
+
+<script language="javascript" type="text/javascript">
+$(document).ready(function () {
+    $('input[type=radio]').change(function() {
+        // When any radio button on the page is selected,
+        // then deselect all other radio buttons.
+        $('input[type=radio]:checked').not(this).prop('checked', false);
+    });
+});​
+</script>
+
+<style>
+
+.reveal-if-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+input[type="radio"]:checked ~ .reveal-if-active,
+input[type="checkbox"]:checked ~ .reveal-if-active {
+  opacity: 1;
+  max-height: 100px; /* little bit of a magic number :( */
+  overflow: visible;
+}
+
+.error {
+	color: red;
+	font-weight: bolder;
+}
+
+.commonerrorblock {
+	color: #000;
+	background-color: #ffEEEE;
+	border: 3px solid #ff0000;
+}
+
+form{
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    width: 100%;
+}
+
+td {
+    width: 100%;
+}
+textarea {
+    width: 400px;
+    height: 100px;
+}
+</style>
+
+
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="header_resize">
+				<div class="logo">
+					<h1>
+						<a href="http://localhost:8080/TextAnalyse/welcome.html">Text Analytics<br /> <small>
+								on News Messages</small></a>
+					</h1>
+				</div>
+				<div class="menu_nav">
+					<ul>
+						<li><a href="http://localhost:8080/TextAnalyse/welcome.html">Home</a></li>
+						<li><a href="http://localhost:8080/TextAnalyse/textAnalyse.html">Text Analyse</a></li>
+						<li class="active"><a href="http://localhost:8080/TextAnalyse/verwaltung.html">Verwaltung</a></li>
+						<li><a href="http://localhost:8080/TextAnalyse/about.html">About Us</a></li>
+						<li><a href="http://localhost:8080/TextAnalyse/contact.html">Contact Us</a></li>
+					</ul>
+					<div class="clr"></div>
+				</div>
+				<div class="clr"></div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="content_resize">
+				<div class="mainbar">
+
+					<div class="article">
+						<h2>
+							<span>Text Analyse</span>
+						</h2>
+					</div>
+					<div id="wrapperanalyse">
+						<div id="welcome-analyse" class="container">
+							<h4>
+								<span>Upload File</span>
+							</h4>
+							<hr>
+								<form ENCTYPE="multipart/form-data" method="post">
+									<input type="radio" name="choice-language-de" id="choice-language-de">
+									<label for="choice-language-de">German</label>
+									<input type="radio" name="choice-language-en" id="choice-language-en">
+									<label for="choice-language-en">English</label>
+									<input class="reveal-if-active" name="file" type="file"/><br>
+									<input class="reveal-if-active" type="submit" value="upload"/></form>
+							<hr>
+						</div>	
+						
+						<div id="welcome-analyse" class="container">
+						<h4>
+						<span>Start Pipeline</span>
+						</h4>
+
+						     <form ENCTYPE="multipart/form-data" method="post">
+						<input type="radio" name="pipeline-language-de" id="pipeline-language-de">
+						<label for="pipelin-language-de">German</label>
+						<input type="radio" name="pipeline-language-en" id="pipeline-language-en">
+						<label for="pipeline-language-en">English</label>
+
+						<!--     <input class="reveal-if-active" name="file" type="file"/><br>-->
+						     <input class="reveal-if-active" type="submit" value="Start Pipeline"/></form>
+						     <hr>
+						</div>
+						<div id="welcome-analyse" class="container">
+							<h4>
+							<span>Upload Data do Blazegraph</span>
+							</h4>
+
+
+						     <form ENCTYPE="multipart/form-data" method="post">
+						     <input  name="blazegraph" type="file"/><br>
+						     <input type="submit" value="Upload Data to Blazegraph"/></form>
+						     <hr>
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class="sidebar">
+					<div class="gadget">
+						<h2 class="star">
+							<span>Nützliche Links</span>
+						</h2>
+						<ul class="sb_menu">
+
+								<li><a href="https://www.informatik.uni-frankfurt.de/">Goethe-Universität
+								</a><br /> Institut für Informatik</li>
+								<li><a href="http://acoli.cs.uni-frankfurt.de/">Lehrstuhl
+										Prof. Christian Chiarcos</a> <br />Angewandte Computerlinguistik
+								</li>
+								<li><a href="http://www.w3schools.com/html/">w3schools.com</a><br />
+									Sehr gut Tutorium-Webseite</li>
+								<li><a
+									href="https://wiki.blazegraph.com/wiki/index.php/Main_Page">blazegraph</a><br />
+									Website Builder Software</li>
+
+							</ul>
+							
+					</div>
+
+				</div>
+				<div class="clr"></div>
+			</div>
+		</div>
+		<div class="fbg">
+			<div class="fbg_resize">
+				<div class="col c1">
+					<h2>Image Analyse</h2>
+					<a href="#"><img src="resources/images/pix1.jpg" width="56"
+						height="56" alt="" /></a> <a href="#"><img
+						src="resources/images/pix2.jpg" width="56" height="56" alt="" /></a>
+					<a href="#"><img src="resources/images/pix3.jpg" width="56"
+						height="56" alt="" /></a> <a href="#"><img
+						src="resources/images/pix4.jpg" width="56" height="56" alt="" /></a>
+					<a href="#"><img src="resources/images/pix5.jpg" width="56"
+						height="56" alt="" /></a> <a href="#"><img
+						src="resources/images/pix6.jpg" width="56" height="56" alt="" /></a>
+				</div>
+				<div class="col c2">
+					<h2>Analyse Tool</h2>
+					<p>
+						Analysepipeline für Nachrichtentexte<br />  -Englisch·
+						-Skalierbar, unter Verwendung bestehender Softwarekomponenten·
+						-Einheitliche, JAVA-basierte Architektur· -Entsprechend
+						vorgegebenen Schnittstellenformaten· -Einbindung eines
+						Datenbank-Backends· -Entwicklung einer Web-GUI
+					</p>
+				</div>
+				<div class="col c3">
+					<h2>About</h2>
+					<img src="resources/images/white.jpg" width="56" height="56" alt="" />
+					<p>
+						Text Analyse mit JSF. <a href="#">Learn more...</a>
+					</p>
+				</div>
+				<div class="clr"></div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer_resize">
+				<p class="lf">&copy; Copyright MyWebSite. Designed by Andy and
+					Kathrin</p>
+				<div class="clr"></div>
+			</div>
+		</div>
+	</div>
+
+
+

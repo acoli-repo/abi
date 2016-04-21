@@ -95,9 +95,9 @@ textarea {
 					<div id="wrapperanalyse">
 						<div id="welcome-analyse" class="container">
 							<h4>
-								<span>SparQL</span> Hier input
+								<span>SparQL Abfrage</span>
 							</h4>
-							Please enter your SparQL: <br />
+							Bitte geben Sie Ihre SparQL Anfrage ein: <br />
 							<form:form method="post" action="successSparQl.html"
 								commandName="ta">
 
@@ -125,34 +125,25 @@ textarea {
 				<div class="sidebar">
 					<div class="gadget">
 						<h2 class="star">
-							<span>Sidebar</span> Menu
+							<span>Nützliche Links</span>
 						</h2>
 						<ul class="sb_menu">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">TemplateInfo</a></li>
-							<li><a href="#">Style Demo</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">Archives</a></li>
-							<li><a href="#">Website Templates</a></li>
-						</ul>
-					</div>
-					<div class="gadget">
-						<h2 class="star">
-							<span>Notwendige Webseite</span>
-						</h2>
-						<ul class="ex_menu">
-							<li><a href="https://www.informatik.uni-frankfurt.de/">Institut
-									fÃ¼r Informatik - Goethe-UniversitÃ¤t </a><br /> Institut Web in
-								Frankfurt Am Mein</li>
-							<li><a href="#">Fachabteilung </a><br /> .....</li>
-							<li><a href="http://www.w3schools.com/html/">w3schools.com</a><br />
-								Sehr gut Tutorium-Webseite</li>
-							<li><a href="https://www.wikipedia.org/">wikipedia</a><br />
-								Linking Knowledge Base</li>
-							<li><a href="#">test</a><br /> Website Builder Software</li>
 
-						</ul>
+								<li><a href="https://www.informatik.uni-frankfurt.de/">Goethe-Universität
+								</a><br /> Institut für Informatik</li>
+								<li><a href="http://acoli.cs.uni-frankfurt.de/">Lehrstuhl
+										Prof. Christian Chiarcos</a> <br />Angewandte Computerlinguistik
+								</li>
+								<li><a href="http://www.w3schools.com/html/">w3schools.com</a><br />
+									Sehr gut Tutorium-Webseite</li>
+								<li><a
+									href="https://wiki.blazegraph.com/wiki/index.php/Main_Page">blazegraph</a><br />
+									Website Builder Software</li>
+
+							</ul>
+							
 					</div>
+
 				</div>
 				<div class="clr"></div>
 			</div>

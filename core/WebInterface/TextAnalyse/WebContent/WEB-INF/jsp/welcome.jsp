@@ -54,12 +54,14 @@
 					<div id="wrapper1">
 						<div id="welcome" class="container">
 							<div class="title">
-								<h2>Welcome to our website</h2>
+								<h2>Willkommen! | Welcome!</h2>
 							</div>
-							<p>Ein Shell-basierter Prototyp mit Modulen in verschiedenen Programmiersprachen existiert bereits. 
-								Die Implementierung muss nicht wiederverwendet werden, kann aber als Orientierung dienen, 
-								insbesondere gilt dies für bestehende JAVA-Komponenten (NLP-Pipeline und RDF-Extraktion). 
+							<p>Diese Webseite ist Ergebnis des Praktikums "Kontextualisierung von Nachrichtentexten" an der Goethe-Universität Frankfurt am Main.
+							Weitere Informationen unter <a href="http://www.bigdata.uni-frankfurt.de/contextualizing-news-messages/">Contextualizing News Messages</a></p>
+							<p>This Website is the result of an internship in the field of "Contextualizing News Messages" at Goethe-Universität Frankfurt am Main.
+							For more information, please visit <a href="http://www.bigdata.uni-frankfurt.de/contextualizing-news-messages/">Contextualizing News Messages</a>
 							</p>
+							<p></p>
 						</div>
 					</div>
 					<div id="three-column" class="container">
@@ -93,34 +95,25 @@
 				<div class="sidebar">
 					<div class="gadget">
 						<h2 class="star">
-							<span>Sidebar</span> Menu
+							<span>Nützliche Links</span>
 						</h2>
 						<ul class="sb_menu">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">TemplateInfo</a></li>
-							<li><a href="#">Style Demo</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">Archives</a></li>
-							<li><a href="#">Website Templates</a></li>
-						</ul>
-					</div>
-					<div class="gadget">
-						<h2 class="star">
-							<span>Notwendige Webseite</span>
-						</h2>
-						<ul class="ex_menu">
-							<li><a href="https://www.informatik.uni-frankfurt.de/">Institut
-									für Informatik - Goethe-Universität </a><br /> Institut Web in
-								Frankfurt Am Mein</li>
-							<li><a href="#">Fachabteilung </a><br /> .....</li>
-							<li><a href="http://www.w3schools.com/html/">w3schools.com</a><br />
-								Sehr gut Tutorium-Webseite</li>
-							<li><a href="https://www.wikipedia.org/">wikipedia</a><br />
-								Linking Knowledge Base</li>
-							<li><a href="https://wiki.blazegraph.com/wiki/index.php/Main_Page">blazegraph</a><br /> Website Builder Software</li>
 
-						</ul>
+								<li><a href="https://www.informatik.uni-frankfurt.de/">Goethe-Universität
+								</a><br /> Institut für Informatik</li>
+								<li><a href="http://acoli.cs.uni-frankfurt.de/">Lehrstuhl
+										Prof. Christian Chiarcos</a> <br />Angewandte Computerlinguistik
+								</li>
+								<li><a href="http://www.w3schools.com/html/">w3schools.com</a><br />
+									Sehr gut Tutorium-Webseite</li>
+								<li><a
+									href="https://wiki.blazegraph.com/wiki/index.php/Main_Page">blazegraph</a><br />
+									Website Builder Software</li>
+
+							</ul>
+							
 					</div>
+
 				</div>
 				<div class="clr"></div>
 			</div>

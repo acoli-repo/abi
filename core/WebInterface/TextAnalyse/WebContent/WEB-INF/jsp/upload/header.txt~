@@ -1,0 +1,48 @@
+<head>
+<title>Text Analytics | Analysepipeline Verwaltung</title>
+
+<link rel="stylesheet" type="text/css" href="/home/kathrin/Dokumente/TextAnalyse/WebContent/resources/style.css" />
+<script src="/home/kathrin/Dokumente/TextAnalyse/WebContent/resources/js/cufon-yui.js"></script>
+<script src="/home/kathrin/Dokumente/TextAnalyse/WebContent/resources/js/georgia.js"></script>
+<script src="/home/kathrin/Dokumente/TextAnalyse/WebContent/resources/js/cuf_run.js"></script>
+
+<style>
+.error {
+	color: red;
+	font-weight: bolder;
+}
+</style>
+
+
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="header_resize">
+				<div class="logo">
+					<h1>
+						<a href="welcome.html">Text Analytics<br /> <small>
+								on News Messages</small></a>
+					</h1>
+				</div>
+				<div class="menu_nav">
+					<ul>
+						<li><a href="welcome.html">Home</a></li>
+						<li><a href="textAnalyse.html">Text Analyse</a></li>
+						<li class="active"><a href="verwaltung.html">Verwaltung</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+					</ul>
+					<div class="clr"></div>
+				</div>
+				<div class="clr"></div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="content_resize">
+				<div class="mainbar">
+					<div class="article">
+						<h2>
+							<span>Analysepipeline Verwaltung </span>
+						</h2>
+

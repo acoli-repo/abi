@@ -59,12 +59,14 @@
 						</h2>
 
 						<section class="container-login">
-							<h4>Diese Einstellung ist nur für Administrator
-								freigeschaltet.</h4><br>
-						    <h4> loggen Sie bitte mit Ihren Administrator-Accout
-								ein.</h4>
+						    <h4> Loggen Sie sich bitte mit Ihren Zugangsdaten ein.</h4>
+						    <div class="login-help">
+								<p>Diese Einstellung ist nur für AdministratorInnen	freigeschaltet.<p>
+								Um Administratorrechte zu erhalten, <a href="contact.html" >kontaktieren</a> Sie uns bitte.</p>
+							</div>
+						    						    
 							<div class="login">
-								<h3>Login to Web App</h3>
+								<h3>Login to Administration</h3>
 								<form:form method="post" action="verwaltung.html"
 								commandName="logindata" >
 								
@@ -111,15 +113,13 @@
 						<h2 class="star">
 							<span>Notwendige Webseite</span>
 						</h2>
-						<ul class="ex_menu">
-							<li><a href="https://www.informatik.uni-frankfurt.de/">Institut
-									fÃ¼r Informatik - Goethe-UniversitÃ¤t </a><br /> Institut Web in
-								Frankfurt Am Mein</li>
-							<li><a href="#">Fachabteilung </a><br /> .....</li>
+											<ul class="ex_menu">
+							<li><a href="https://www.informatik.uni-frankfurt.de/">Goethe-Universität </a><br /> Institut für Informatik</li>
+							<li><a href="http://acoli.cs.uni-frankfurt.de/">Lehrstuhl Prof. Christian Chiarcos</a>
+							<br />Angewandte Computerlinguistik 
+							</li>
 							<li><a href="http://www.w3schools.com/html/">w3schools.com</a><br />
 								Sehr gut Tutorium-Webseite</li>
-							<li><a href="https://www.wikipedia.org/">wikipedia</a><br />
-								Linking Knowledge Base</li>
 							<li><a href="https://wiki.blazegraph.com/wiki/index.php/Main_Page">blazegraph</a><br /> Website Builder Software</li>
 
 						</ul>

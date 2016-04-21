@@ -50,49 +50,43 @@
 				<div class="mainbar">
 					<div class="article">
 						<h2>
-							<span>About to</span> Analysepipeline für Nachrichtentexte 
+							<span>About</span>
 
 						</h2>
-						<p>
+						<!--   <p>
 							<strong>1. Text Extraktion.</strong>
-						</p>
-						<p>HTML: Shell Magic (w3m, sed, perl, xpath, ...) oder reguläe Ausdrücke.</p>
+						</p> -->
+						<p>Über das Tag "Text Analyse" können Sie SparQL Anfragen an unsere Datenbank stellen, die Nachrichtendaten enthält. 
+						Um neue Daten auf die Datenbank hinzuzufügen, benötigen Sie Administratorrechte.</p>
+						<!--  <p>HTML: Shell Magic (w3m, sed, perl, xpath, ...) oder reguläe Ausdrücke.</p>
 						<p> 
 						PDF: pdf2xml, dann xslt (existiert bereits, kann aus JAVA heraus angewendet werden).</p>
+						-->
 					</div>
 					
 				</div>
 				<div class="sidebar">
 					<div class="gadget">
 						<h2 class="star">
-							<span>Sidebar</span> Menu
+							<span>Nützliche Links</span>
 						</h2>
 						<ul class="sb_menu">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">TemplateInfo</a></li>
-							<li><a href="#">Style Demo</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">Archives</a></li>
-							<li><a href="#">Website Templates</a></li>
-						</ul>
-					</div>
-					<div class="gadget">
-						<h2 class="star">
-							<span>Notwendige Webseite</span>
-						</h2>
-						<ul class="ex_menu">
-							<li><a href="https://www.informatik.uni-frankfurt.de/">Institut
-									für Informatik - Goethe-Universität </a><br /> Institut Web in
-								Frankfurt Am Mein</li>
-							<li><a href="#">Fachabteilung </a><br /> .....</li>
-							<li><a href="http://www.w3schools.com/html/">w3schools.com</a><br />
-								Sehr gut Tutorium-Webseite</li>
-							<li><a href="https://www.wikipedia.org/">wikipedia</a><br />
-								Linking Knowledge Base</li>
-							<li><a href="#">test</a><br /> Website Builder Software</li>
 
-						</ul>
+								<li><a href="https://www.informatik.uni-frankfurt.de/">Goethe-Universität
+								</a><br /> Institut für Informatik</li>
+								<li><a href="http://acoli.cs.uni-frankfurt.de/">Lehrstuhl
+										Prof. Christian Chiarcos</a> <br />Angewandte Computerlinguistik
+								</li>
+								<li><a href="http://www.w3schools.com/html/">w3schools.com</a><br />
+									Sehr gut Tutorium-Webseite</li>
+								<li><a
+									href="https://wiki.blazegraph.com/wiki/index.php/Main_Page">blazegraph</a><br />
+									Website Builder Software</li>
+
+							</ul>
+							
 					</div>
+
 				</div>
 				<div class="clr"></div>
 			</div>

@@ -60,10 +60,10 @@ var force = d3.layout.force()
         if(d.target.name[0] == ':')
             return 130;
         else
-            return 500;
+            return 400//500;
     })
     .size([width, height])
-    .gravity(0.01)
+    .gravity(0.1)//(0.01)
     .friction(0.9)
     .linkStrength(function(d,i) {
         if(d.target.name[0] == ':')

@@ -21,6 +21,11 @@
 <script src="${georgia}"></script>
 <spring:url value="/resources/js/cuf_run.js" var="cuf_run" />
 <script src="${cuf_run}"></script>
+<script>$("#upload").change(function () {
+	  var filename = $(this).val();
+	  $('#fileName').val(filename);
+	}).change();</script>
+
 <style>
 .error {
 	color: red;
@@ -60,110 +65,33 @@
 						<h2>
 							<span>Analysepipeline Verwaltung </span>
 						</h2>
+						
+						
+							
+						
 						<div
 							style="width: 80%; margin-right: 10%; margin-left: 10%; text-align: center;">
-							<h3>Analysepipeline Verwaltung :</h3>
+							
 
-							<form:form method="post" action="successSave.html"
-								commandName="pipeline">
-								<table>
-									<tr>
-										<td><form:label path="sprache">please choose one language</form:label>
-										</td>
-
-										<td><form:input id="sprache" name="sprache"
-												path="sprache" value="${pipeline.sprache}" /></td>
-									</tr>
-
-									<tr>
-										<td><form:errors path="sprache" cssClass="error" /></td>
-									</tr>
-
-									<tr>
-										<td><form:label path="pdfclasspath">Please enter your pdf class path</form:label>
-										</td>
-
-										<td><form:input id="pdfclasspath" name="pdfclasspath"
-												path="pdfclasspath" value="${pipeline.pdfclasspath}" /></td>
-									</tr>
-
-									<tr>
-										<td><form:errors path="pdfclasspath" cssClass="error" />
-										</td>
-									</tr>
-
-									<tr>
-										<td><form:label path="htmlclasspath">Please enter your html class path</form:label>
-										</td>
-
-										<td><form:input id="htmlclasspath" name="htmlclasspath"
-												path="htmlclasspath" value="${pipeline.htmlclasspath}" /></td>
-									</tr>
-
-									<tr>
-										<td><form:errors path="htmlclasspath" cssClass="error" />
-										</td>
-									</tr>
-
-									<tr>
-										<td><form:label path="outputtextclasspath">Please enter your output text class path</form:label>
-										</td>
-
-										<td><form:input id="outputtextclasspath"
-												name="outputtextclasspath" path="outputtextclasspath"
-												value="${pipeline.outputtextclasspath}" /></td>
-									</tr>
-
-									<tr>
-										<td><form:errors path="outputtextclasspath"
-												cssClass="error" /></td>
-									</tr>
-
-									<tr>
-										<td><form:label path="outputrdfclasspath">Please enter your output RDF class path</form:label>
-										</td>
-
-										<td><form:input id="outputrdfclasspath"
-												name="outputrdfclasspath" path="outputrdfclasspath"
-												value="${pipeline.outputrdfclasspath}" /></td>
-									</tr>
-
-									<tr>
-										<td><form:errors path="outputrdfclasspath"
-												cssClass="error" /></td>
-									</tr>
-
-									<tr>
-										<td><form:label path="outputturtleclasspath">Please enter your output Turtle class path</form:label>
-										</td>
-										<td><form:input id="outputturtleclasspath"
-												name="outputturtleclasspath" path="outputturtleclasspath"
-												value="${pipeline.outputturtleclasspath}" /></td>
-									</tr>
-
-									<tr>
-										<td><form:errors path="outputturtleclasspath"
-												cssClass="error" /></td>
-									</tr>
-
-									<tr>
-										<td><input type="submit" name="commit" value="save">
-										</td>
-									</tr>
-
-								</table>
-							</form:form>
+				<div id="wrapperanalyse">
+						<div id="welcome-analyse" class="container">
+							
+							
+							<a href="http://localhost:8081" class="button">Data Upload, Pipeline, Blazegraph Update</a>
+						</div>
+					</div>
 
 
 
-                          <br>
-                          <SCRIPT > 
-                          function openwin() { 
-                        	  window.open("blazegraph.html","","width=800,height=600") 
-                        	  } 
-							</SCRIPT> 
-							<button onclick="openwin()">database Verwartung</button>
-
+							<br>
+							<SCRIPT>
+								function openwin() {
+									window.open("blazegraph.html", "")
+								}
+							</SCRIPT>
+							<button onclick="openwin()" style="color:green">
+								Manage Database
+							</button>
 
 						</div>
 					</div>
@@ -173,36 +101,25 @@
 				<div class="sidebar">
 					<div class="gadget">
 						<h2 class="star">
-							<span>Sidebar</span> Menu
+							<span>Nützliche Links</span>
 						</h2>
 						<ul class="sb_menu">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">TemplateInfo</a></li>
-							<li><a href="#">Style Demo</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">Archives</a></li>
-							<li><a href="#">Website Templates</a></li>
-						</ul>
-					</div>
-					<div class="gadget">
-						<h2 class="star">
-							<span>Notwendige Webseite</span>
-						</h2>
-						<ul class="ex_menu">
-							<li><a href="https://www.informatik.uni-frankfurt.de/">Institut
-									fÃ¼r Informatik - Goethe-UniversitÃ¤t </a><br /> Institut Web in
-								Frankfurt Am Mein</li>
-							<li><a href="#">Fachabteilung </a><br /> .....</li>
-							<li><a href="http://www.w3schools.com/html/">w3schools.com</a><br />
-								Sehr gut Tutorium-Webseite</li>
-							<li><a href="https://www.wikipedia.org/">wikipedia</a><br />
-								Linking Knowledge Base</li>
-							<li><a
-								href="https://wiki.blazegraph.com/wiki/index.php/Main_Page">blazegraph</a><br />
-								Website Builder Software</li>
 
-						</ul>
+								<li><a href="https://www.informatik.uni-frankfurt.de/">Goethe-Universität
+								</a><br /> Institut für Informatik</li>
+								<li><a href="http://acoli.cs.uni-frankfurt.de/">Lehrstuhl
+										Prof. Christian Chiarcos</a> <br />Angewandte Computerlinguistik
+								</li>
+								<li><a href="http://www.w3schools.com/html/">w3schools.com</a><br />
+									Sehr gut Tutorium-Webseite</li>
+								<li><a
+									href="https://wiki.blazegraph.com/wiki/index.php/Main_Page">blazegraph</a><br />
+									Website Builder Software</li>
+
+							</ul>
+							
 					</div>
+
 				</div>
 				<div class="clr"></div>
 			</div>
@@ -224,11 +141,11 @@
 				<div class="col c2">
 					<h2>Analyse Tool</h2>
 					<p>
-						Analysepipeline fÃ¼r Nachrichtentexte<br /> ï· -Englisch ï·
-						-Skalierbar, unter Verwendung bestehender Softwarekomponenten ï·
-						-Einheitliche, JAVA-basierte Architektur ï· -Entsprechend
-						vorgegebenen Schnittstellenformaten ï· -Einbindung eines
-						Datenbank-Backends ï· -Entwicklung einer Web-GUI
+						Analysepipeline für Nachrichtentexte<br /> Englisch - Deutsch
+						- Skalierbar, unter Verwendung bestehender Softwarekomponenten
+						-Einheitliche, JAVA-basierte Architektur · -Entsprechend
+						vorgegebenen Schnittstellenformaten -Einbindung eines
+						Datenbank-Backends -Entwicklung einer Web-GUI
 					</p>
 				</div>
 				<div class="col c3">
