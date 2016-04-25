@@ -1,0 +1,99 @@
+INFO: com.bigdata.util.config.LogUtil: Configure: jar:file:/home/kathrin/Schreibtisch/TextAnalyse/Nanolib/blazegraph.jar!/log4j.properties
+
+BlazeGraph(TM) Graph Engine
+
+Flexible
+Reliable
+Affordable
+Web-Scale Computing for the Enterprise
+
+Copyright SYSTAP, LLC DBA Blazegraph 2006-2016.  All rights reserved.
+
+kathrin-Aspire-5830TG
+Mon Apr 04 04:54:06 CEST 2016
+Linux/4.2.0-34-generic amd64
+Intel(R) Core(TM) i5-2430M CPU @ 2.40GHz Family 6 Model 42 Stepping 7, GenuineIntel #CPU=4
+Oracle Corporation 1.8.0_66-internal
+freeMemory=56179496
+buildVersion=2.0.1
+gitCommit=eb9bfaac5165a14430b66c3b923d6bcbdbff4984
+
+Dependency         License
+ICU                http://source.icu-project.org/repos/icu/icu/trunk/license.html
+bigdata-ganglia    http://www.apache.org/licenses/LICENSE-2.0.html
+blueprints-core    https://github.com/tinkerpop/blueprints/blob/master/LICENSE.txt
+colt               http://acs.lbl.gov/software/colt/license.html
+commons-codec      http://www.apache.org/licenses/LICENSE-2.0.html
+commons-fileupload http://www.apache.org/licenses/LICENSE-2.0.html
+commons-io         http://www.apache.org/licenses/LICENSE-2.0.html
+commons-logging    http://www.apache.org/licenses/LICENSE-2.0.html
+dsiutils           http://www.gnu.org/licenses/lgpl-2.1.html
+fastutil           http://www.apache.org/licenses/LICENSE-2.0.html
+flot               http://www.opensource.org/licenses/mit-license.php
+high-scale-lib     http://creativecommons.org/licenses/publicdomain
+httpclient         http://www.apache.org/licenses/LICENSE-2.0.html
+httpclient-cache   http://www.apache.org/licenses/LICENSE-2.0.html
+httpcore           http://www.apache.org/licenses/LICENSE-2.0.html
+httpmime           http://www.apache.org/licenses/LICENSE-2.0.html
+jackson-core       http://www.apache.org/licenses/LICENSE-2.0.html
+jetty              http://www.apache.org/licenses/LICENSE-2.0.html
+jquery             https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
+log4j              http://www.apache.org/licenses/LICENSE-2.0.html
+lucene             http://www.apache.org/licenses/LICENSE-2.0.html
+nanohttp           http://elonen.iki.fi/code/nanohttpd/#license
+rexster-core       https://github.com/tinkerpop/rexster/blob/master/LICENSE.txt
+river              http://www.apache.org/licenses/LICENSE-2.0.html
+semargl            https://github.com/levkhomich/semargl/blob/master/LICENSE
+servlet-api        http://www.apache.org/licenses/LICENSE-2.0.html
+sesame             http://www.openrdf.org/download.jsp
+slf4j              http://www.slf4j.org/license.html
+zookeeper          http://www.apache.org/licenses/LICENSE-2.0.html
+
+WARN : NanoSparqlServer.java:514: Starting NSS
+WARN : ServiceProviderHook.java:171: Running.
+WARN : AbstractLifeCycle.java:212: FAILED ServerConnector@2002fc1d{HTTP/1.1}{0.0.0.0:9999}: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+at sun.nio.ch.Net.bind0(Native Method)
+at sun.nio.ch.Net.bind(Net.java:433)
+at sun.nio.ch.Net.bind(Net.java:425)
+at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:320)
+at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at org.eclipse.jetty.server.Server.doStart(Server.java:366)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at com.bigdata.rdf.sail.webapp.NanoSparqlServer.awaitServerStart(NanoSparqlServer.java:515)
+at com.bigdata.rdf.sail.webapp.StandaloneNanoSparqlServer.main(StandaloneNanoSparqlServer.java:150)
+WARN : AbstractLifeCycle.java:212: FAILED org.eclipse.jetty.server.Server@587e5365: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+at sun.nio.ch.Net.bind0(Native Method)
+at sun.nio.ch.Net.bind(Net.java:433)
+at sun.nio.ch.Net.bind(Net.java:425)
+at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:320)
+at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at org.eclipse.jetty.server.Server.doStart(Server.java:366)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at com.bigdata.rdf.sail.webapp.NanoSparqlServer.awaitServerStart(NanoSparqlServer.java:515)
+at com.bigdata.rdf.sail.webapp.StandaloneNanoSparqlServer.main(StandaloneNanoSparqlServer.java:150)
+FATAL: NanoSparqlServer.java:535: Server did not start.
+ERROR: Banner.java:160: Uncaught exception in thread
+java.net.BindException: Address already in use
+at sun.nio.ch.Net.bind0(Native Method)
+at sun.nio.ch.Net.bind(Net.java:433)
+at sun.nio.ch.Net.bind(Net.java:425)
+at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:320)
+at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at org.eclipse.jetty.server.Server.doStart(Server.java:366)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at com.bigdata.rdf.sail.webapp.NanoSparqlServer.awaitServerStart(NanoSparqlServer.java:515)
+at com.bigdata.rdf.sail.webapp.StandaloneNanoSparqlServer.main(StandaloneNanoSparqlServer.java:150)

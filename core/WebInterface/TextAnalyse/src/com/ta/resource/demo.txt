@@ -1,0 +1,5 @@
+
+<http://purl.org/acoli/open-ie/king> <http://purl.org/acoli/open-ie/in> <http://purl.org/acoli/open-ie/record> ;
+	<http://purl.org/acoli/open-ie/do> <http://purl.org/acoli/open-ie/material> ;
+	<http://purl.org/acoli/open-ie/king> <http://purl.org/acoli/open-ie/material> ;
+	<http://purl.org/acoli/open-ie/of> <http://purl.org/acoli/open-ie/_16th> .

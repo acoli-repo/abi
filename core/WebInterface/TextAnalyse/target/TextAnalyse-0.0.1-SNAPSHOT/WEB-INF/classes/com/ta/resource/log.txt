@@ -1,0 +1,141 @@
+INFO: com.bigdata.util.config.LogUtil: Configure: jar:file:/C:/Users/Annie/workspace/TextAnalyse/Nanolib/blazegraph.jar!/log4j.properties
+WARN : SystemUtil.java:71: No CPUParser for this platform - looking for class: [org.apache.system.Windows7]
+
+BlazeGraph(TM) Graph Engine
+
+Flexible
+Reliable
+Affordable
+Web-Scale Computing for the Enterprise
+
+Copyright SYSTAP, LLC DBA Blazegraph 2006-2016.  All rights reserved.
+
+Annie-PC
+Sun Mar 27 14:17:02 CEST 2016
+Windows 7/6.1 amd64
+amd64 Family n, Model n, Stepping n, Undeterminable #CPU=1
+Oracle Corporation 1.7.0_79
+freeMemory=124360344
+buildVersion=2.0.1
+gitCommit=eb9bfaac5165a14430b66c3b923d6bcbdbff4984
+
+Dependency         License
+ICU                http://source.icu-project.org/repos/icu/icu/trunk/license.html
+bigdata-ganglia    http://www.apache.org/licenses/LICENSE-2.0.html
+blueprints-core    https://github.com/tinkerpop/blueprints/blob/master/LICENSE.txt
+colt               http://acs.lbl.gov/software/colt/license.html
+commons-codec      http://www.apache.org/licenses/LICENSE-2.0.html
+commons-fileupload http://www.apache.org/licenses/LICENSE-2.0.html
+commons-io         http://www.apache.org/licenses/LICENSE-2.0.html
+commons-logging    http://www.apache.org/licenses/LICENSE-2.0.html
+dsiutils           http://www.gnu.org/licenses/lgpl-2.1.html
+fastutil           http://www.apache.org/licenses/LICENSE-2.0.html
+flot               http://www.opensource.org/licenses/mit-license.php
+high-scale-lib     http://creativecommons.org/licenses/publicdomain
+httpclient         http://www.apache.org/licenses/LICENSE-2.0.html
+httpclient-cache   http://www.apache.org/licenses/LICENSE-2.0.html
+httpcore           http://www.apache.org/licenses/LICENSE-2.0.html
+httpmime           http://www.apache.org/licenses/LICENSE-2.0.html
+jackson-core       http://www.apache.org/licenses/LICENSE-2.0.html
+jetty              http://www.apache.org/licenses/LICENSE-2.0.html
+jquery             https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
+log4j              http://www.apache.org/licenses/LICENSE-2.0.html
+lucene             http://www.apache.org/licenses/LICENSE-2.0.html
+nanohttp           http://elonen.iki.fi/code/nanohttpd/#license
+rexster-core       https://github.com/tinkerpop/rexster/blob/master/LICENSE.txt
+river              http://www.apache.org/licenses/LICENSE-2.0.html
+semargl            https://github.com/levkhomich/semargl/blob/master/LICENSE
+servlet-api        http://www.apache.org/licenses/LICENSE-2.0.html
+sesame             http://www.openrdf.org/download.jsp
+slf4j              http://www.slf4j.org/license.html
+zookeeper          http://www.apache.org/licenses/LICENSE-2.0.html
+
+WARN : NanoSparqlServer.java:514: Starting NSS
+WARN : WebAppContext.java:506: Failed startup of context o.e.j.w.WebAppContext@6c872ba6{/blazegraph,jar:file:/C:/Users/Annie/workspace/TextAnalyse/Nanolib/blazegraph.jar!/war,STARTING}{jar:file:/C:/Users/Annie/workspace/TextAnalyse/Nanolib/blazegraph.jar!/war}
+java.lang.RuntimeException: java.lang.RuntimeException: file=blazegraph.jnl
+at com.bigdata.rdf.sail.webapp.BigdataRDFServletContextListener.openIndexManager(BigdataRDFServletContextListener.java:805)
+at com.bigdata.rdf.sail.webapp.BigdataRDFServletContextListener.contextInitialized(BigdataRDFServletContextListener.java:277)
+at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:798)
+at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:789)
+at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1341)
+at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1334)
+at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:497)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:163)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+at org.eclipse.jetty.server.Server.start(Server.java:387)
+at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at com.bigdata.rdf.sail.webapp.NanoSparqlServer.awaitServerStart(NanoSparqlServer.java:515)
+at com.bigdata.rdf.sail.webapp.StandaloneNanoSparqlServer.main(StandaloneNanoSparqlServer.java:150)
+Caused by: java.lang.RuntimeException: file=blazegraph.jnl
+at com.bigdata.journal.FileMetadata.<init>(FileMetadata.java:1144)
+at com.bigdata.journal.FileMetadata.createInstance(FileMetadata.java:1470)
+at com.bigdata.journal.AbstractJournal.<init>(AbstractJournal.java:1155)
+at com.bigdata.journal.Journal.<init>(Journal.java:274)
+at com.bigdata.journal.Journal.<init>(Journal.java:267)
+at com.bigdata.rdf.sail.webapp.BigdataRDFServletContextListener.openIndexManager(BigdataRDFServletContextListener.java:799)
+... 27 more
+Caused by: java.io.IOException: Stream Closed
+at java.io.RandomAccessFile.length(Native Method)
+at com.bigdata.journal.FileMetadata.<init>(FileMetadata.java:956)
+... 32 more
+WARN : AbstractLifeCycle.java:212: FAILED ServerConnector@4719d351{HTTP/1.1}{0.0.0.0:9999}: java.net.BindException: Address already in use: bind
+java.net.BindException: Address already in use: bind
+at sun.nio.ch.Net.bind0(Native Method)
+at sun.nio.ch.Net.bind(Net.java:444)
+at sun.nio.ch.Net.bind(Net.java:436)
+at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:320)
+at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at org.eclipse.jetty.server.Server.doStart(Server.java:366)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at com.bigdata.rdf.sail.webapp.NanoSparqlServer.awaitServerStart(NanoSparqlServer.java:515)
+at com.bigdata.rdf.sail.webapp.StandaloneNanoSparqlServer.main(StandaloneNanoSparqlServer.java:150)
+WARN : AbstractLifeCycle.java:212: FAILED org.eclipse.jetty.server.Server@8408396: java.net.BindException: Address already in use: bind
+java.net.BindException: Address already in use: bind
+at sun.nio.ch.Net.bind0(Native Method)
+at sun.nio.ch.Net.bind(Net.java:444)
+at sun.nio.ch.Net.bind(Net.java:436)
+at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:320)
+at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at org.eclipse.jetty.server.Server.doStart(Server.java:366)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at com.bigdata.rdf.sail.webapp.NanoSparqlServer.awaitServerStart(NanoSparqlServer.java:515)
+at com.bigdata.rdf.sail.webapp.StandaloneNanoSparqlServer.main(StandaloneNanoSparqlServer.java:150)
+FATAL: NanoSparqlServer.java:535: Server did not start.
+ERROR: Banner.java:160: Uncaught exception in thread
+java.net.BindException: Address already in use: bind
+at sun.nio.ch.Net.bind0(Native Method)
+at sun.nio.ch.Net.bind(Net.java:444)
+at sun.nio.ch.Net.bind(Net.java:436)
+at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:320)
+at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at org.eclipse.jetty.server.Server.doStart(Server.java:366)
+at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+at com.bigdata.rdf.sail.webapp.NanoSparqlServer.awaitServerStart(NanoSparqlServer.java:515)
+at com.bigdata.rdf.sail.webapp.StandaloneNanoSparqlServer.main(StandaloneNanoSparqlServer.java:150)

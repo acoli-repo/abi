@@ -1,0 +1,10 @@
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#n0_001_tomb>	<http://purl.org/acoli/open-ie/be>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#n0_028_topic>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#n0_001_tomb>	<http://purl.org/acoli/open-ie/cardinality>	<"1"^^<http://www.w3.org/2001/XMLSchema#int>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#n0_001_tomb>	<http://purl.org/acoli/open-ie/do>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#n0_028_topic>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#n0_001_tomb>	<http://purl.org/acoli/open-ie/of>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#n0_003_tutankhamun>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#n0_001_tomb>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/acoli/open-ie/tomb>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#n0_001_tomb>	<http://www.w3.org/2000/01/rdf-schema#label>	<"The tomb of Tutankhamun , the king of ancient Egypt who became famous when Howard Carter discovered his tomb nearly intact in 1922 ,"^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#n0_003_tutankhamun>	<http://purl.org/acoli/open-ie/cardinality>	<"1"^^<http://www.w3.org/2001/XMLSchema#int>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#n0_003_tutankhamun>	<http://www.w3.org/2000/01/rdf-schema#label>	<"Tutankhamun , the king of ancient Egypt who became famous when Howard Carter discovered his tomb nearly intact in 1922 ,"^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#n0_006_king>	<http://purl.org/acoli/open-ie/cardinality>	<"1"^^<http://www.w3.org/2001/XMLSchema#int>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1363910379#n0_006_king>	<http://purl.org/acoli/open-ie/do>	<_:t716>.

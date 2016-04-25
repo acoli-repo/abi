@@ -1,0 +1,53 @@
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/153646652#n9_006_burgerkrieg>	<http://purl.org/acoli/open-ie/herrschen>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/153646652#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/153646652#n9_000_in>	<http://www.w3.org/2000/01/rdf-schema#label>	<"In Syrien"^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/153646652#n9_006_burgerkrieg>	<http://purl.org/acoli/open-ie/do>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/153646652#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/153646652#n9_006_burgerkrieg>	<http://purl.org/acoli/open-ie/cardinality>	<"1"^^<http://www.w3.org/2001/XMLSchema#int>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/153646652#n9_006_burgerkrieg>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/acoli/open-ie/burgerkrieg>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/153646652#n9_006_burgerkrieg>	<http://www.w3.org/2000/01/rdf-schema#label>	<"ein Bürgerkrieg, in dessen Folge rund die Hälfte der Bevölkerung das Land verlassen hat."^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1054074316#n9_006_burgerkrieg>	<http://purl.org/acoli/open-ie/herrschen>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1054074316#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1054074316#n9_006_burgerkrieg>	<http://purl.org/acoli/open-ie/cardinality>	<"1"^^<http://www.w3.org/2001/XMLSchema#int>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1054074316#n9_006_burgerkrieg>	<http://purl.org/acoli/open-ie/do>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1054074316#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1054074316#n9_006_burgerkrieg>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/acoli/open-ie/burgerkrieg>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1054074316#n9_006_burgerkrieg>	<http://www.w3.org/2000/01/rdf-schema#label>	<"ein Bürgerkrieg, in dessen Folge rund die Hälfte der Bevölkerung das Land verlassen hat."^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1054074316#n9_000_in>	<http://www.w3.org/2000/01/rdf-schema#label>	<"In Syrien"^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1054074316#n82_000_sep>	<http://purl.org/acoli/open-ie/herrschen>	<_:genid-7ee1fb1b8ed849bd970636ad2ed4306e-t6797>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1054074316#n82_000_sep>	<http://purl.org/acoli/open-ie/cardinality>	<"1"^^<http://www.w3.org/2001/XMLSchema#int>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1054074316#n82_000_sep>	<http://purl.org/acoli/open-ie/do>	<_:genid-7ee1fb1b8ed849bd970636ad2ed4306e-t6797>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1054074316#n82_000_sep>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/acoli/open-ie/sep>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1054074316#n82_000_sep>	<http://www.w3.org/2000/01/rdf-schema#label>	<"Sep. 2015 Sein Instinkt sichert ihm die Macht: Tsipras"^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1432535753#n9_006_burgerkrieg>	<http://purl.org/acoli/open-ie/herrschen>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1432535753#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1432535753#n9_006_burgerkrieg>	<http://purl.org/acoli/open-ie/cardinality>	<"1"^^<http://www.w3.org/2001/XMLSchema#int>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1432535753#n9_006_burgerkrieg>	<http://purl.org/acoli/open-ie/do>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1432535753#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1432535753#n9_006_burgerkrieg>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/acoli/open-ie/burgerkrieg>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1432535753#n9_006_burgerkrieg>	<http://www.w3.org/2000/01/rdf-schema#label>	<"ein Bürgerkrieg, in dessen Folge rund die Hälfte der Bevölkerung das Land verlassen hat."^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1432535753#n9_000_in>	<http://www.w3.org/2000/01/rdf-schema#label>	<"In Syrien"^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/537265886#n9_006_burgerkrieg>	<http://purl.org/acoli/open-ie/herrschen>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/537265886#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/537265886#n9_006_burgerkrieg>	<http://purl.org/acoli/open-ie/cardinality>	<"1"^^<http://www.w3.org/2001/XMLSchema#int>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/537265886#n9_006_burgerkrieg>	<http://purl.org/acoli/open-ie/do>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/537265886#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/537265886#n9_006_burgerkrieg>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/acoli/open-ie/burgerkrieg>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/537265886#n9_006_burgerkrieg>	<http://www.w3.org/2000/01/rdf-schema#label>	<"ein Bürgerkrieg, in dessen Folge rund die Hälfte der Bevölkerung das Land verlassen hat."^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/537265886#n9_000_in>	<http://www.w3.org/2000/01/rdf-schema#label>	<"In Syrien"^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2106900153#n9_006_bürgerkrieg>	<http://purl.org/acoli/open-ie/herrschen>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2106900153#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2106900153#n9_006_bürgerkrieg>	<http://purl.org/acoli/open-ie/cardinality>	<"1"^^<http://www.w3.org/2001/XMLSchema#int>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2106900153#n9_006_bürgerkrieg>	<http://purl.org/acoli/open-ie/do>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2106900153#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2106900153#n9_006_bürgerkrieg>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/acoli/open-ie/bürgerkrieg>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2106900153#n9_006_bürgerkrieg>	<http://www.w3.org/2000/01/rdf-schema#label>	<"ein Bürgerkrieg, in dessen Folge rund die Hälfte der Bevölkerung das Land verlassen hat."^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2112233878#n9_006_bürgerkrieg>	<http://purl.org/acoli/open-ie/herrschen>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2112233878#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2112233878#n9_000_in>	<http://www.w3.org/2000/01/rdf-schema#label>	<"In Syrien"^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2112233878#n9_006_bürgerkrieg>	<http://purl.org/acoli/open-ie/cardinality>	<"1"^^<http://www.w3.org/2001/XMLSchema#int>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2112233878#n9_006_bürgerkrieg>	<http://purl.org/acoli/open-ie/do>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2112233878#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2112233878#n9_006_bürgerkrieg>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/acoli/open-ie/bürgerkrieg>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2112233878#n9_006_bürgerkrieg>	<http://www.w3.org/2000/01/rdf-schema#label>	<"ein Bürgerkrieg, in dessen Folge rund die Hälfte der Bevölkerung das Land verlassen hat."^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2106900153#n9_000_in>	<http://www.w3.org/2000/01/rdf-schema#label>	<"In Syrien"^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1842853283#n9_006_bürgerkrieg>	<http://purl.org/acoli/open-ie/herrschen>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1842853283#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1842853283#n9_006_bürgerkrieg>	<http://purl.org/acoli/open-ie/cardinality>	<"1"^^<http://www.w3.org/2001/XMLSchema#int>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1842853283#n9_006_bürgerkrieg>	<http://purl.org/acoli/open-ie/do>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1842853283#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1842853283#n9_006_bürgerkrieg>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/acoli/open-ie/bürgerkrieg>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1842853283#n9_006_bürgerkrieg>	<http://www.w3.org/2000/01/rdf-schema#label>	<"ein Bürgerkrieg, in dessen Folge rund die Hälfte der Bevölkerung das Land verlassen hat."^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1842853283#n9_000_in>	<http://www.w3.org/2000/01/rdf-schema#label>	<"In Syrien"^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1168942230#n9_006_bürgerkrieg>	<http://purl.org/acoli/open-ie/herrschen>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1168942230#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1168942230#n9_000_in>	<http://www.w3.org/2000/01/rdf-schema#label>	<"In Syrien"^^<http://www.w3.org/2001/XMLSchema#string>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1168942230#n9_006_bürgerkrieg>	<http://purl.org/acoli/open-ie/do>	<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1168942230#n9_000_in>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1168942230#n9_006_bürgerkrieg>	<http://purl.org/acoli/open-ie/cardinality>	<"1"^^<http://www.w3.org/2001/XMLSchema#int>>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1168942230#n9_006_bürgerkrieg>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/acoli/open-ie/bürgerkrieg>.
+<http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/1168942230#n9_006_bürgerkrieg>	<http://www.w3.org/2000/01/rdf-schema#label>	<"ein Bürgerkrieg, in dessen Folge rund die Hälfte der Bevölkerung das Land verlassen hat."^^<http://www.w3.org/2001/XMLSchema#string>>.

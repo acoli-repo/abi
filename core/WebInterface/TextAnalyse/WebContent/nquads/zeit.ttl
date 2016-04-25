@@ -1,0 +1,622 @@
+@prefix : <http://purl.org/acoli/open-ie/> .
+@prefix data: <http://purl.org/acoli/open-ie/in2rdf.Sentence2Triple/2112233878#> .
+@prefix terms: <http://purl.org/acoli/open-ie/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+
+#Flüchtlingspolitik: "Europa hat die Pflicht, zu helfen"Ausgerechnet der Chef der Grenzschutzbehörde Frontex, Fabrice Leggeri, ermahnt im Interview die Europäische Union: Nehmt weiter Flüchtlinge auf! Interview: Philip Faigle 31. 
+
+#März 2016, 10:52 Uhr 39 KommentareFabrice Leggeri, Chef von Frontex © John MacDougall/AFP/Getty Images Read the English version of this article here ZEIT ONLINE: Herr Leggeri, in Deutschland hoffen viele, dass nach dem EU-Deal mit der Türkei weniger Flüchtlinge nach Europa kommen werden. 
+data:n1_005_kommentarefabrice	:cardinality	"1"^^xsd:int.
+data:n1_005_kommentarefabrice	:do	data:n1_024_herr.
+data:n1_005_kommentarefabrice	:hoffen	data:n1_024_herr.
+data:n1_005_kommentarefabrice	a	:kommentarefabrice.
+data:n1_005_kommentarefabrice	rdfs:label	"39 KommentareFabrice"^^xsd:string.
+data:n1_024_herr	:cardinality	"1"^^xsd:int.
+data:n1_024_herr	a	:herr.
+data:n1_024_herr	rdfs:label	"ZEIT ONLINE: Herr Leggeri, in Deutschland"^^xsd:string.
+data:n1_031_nach	:do	_:n1.
+data:n1_031_nach	:kommen	_:n1.
+data:n1_031_nach	rdfs:label	"nach dem EU-Deal mit der Türkei weniger Flüchtlinge"^^xsd:string.
+data:n1_041_kommen	a	:kommen.
+data:n1_041_kommen	rdfs:label	"März 2016, 10:52 Uhr 39 KommentareFabrice Leggeri, Chef von Frontex © John MacDougall/AFP/Getty Images Read the English version of this article here ZEIT ONLINE: Herr Leggeri, in Deutschland hoffen viele, dass nach dem EU-Deal mit der Türkei weniger Flüchtlinge nach Europa kommen werden."^^xsd:string.
+
+#Denken Sie das auch? Fabrice Leggeri: Die Vereinbarung mit der Türkei ist vor allem ein Signal. 
+data:n2_000_denken	a	:denken.
+data:n2_000_denken	rdfs:label	"Denken Sie das auch? Fabrice Leggeri: Die Vereinbarung mit der Türkei ist vor allem ein Signal."^^xsd:string.
+data:n2_001_sie	:denken	data:n2_002_der.
+data:n2_001_sie	:do	data:n2_002_der.
+data:n2_001_sie	rdfs:label	"Sie"^^xsd:string.
+data:n2_002_der	rdfs:label	"das"^^xsd:string.
+data:n2_003_auch	:cardinality	"1"^^xsd:int.
+data:n2_003_auch	rdfs:label	"auch?"^^xsd:string.
+
+#Sie zeigt: die Grenzen nach Europa sind nicht einfach offen. 
+
+#Das wird viele davon abhalten, Tausende Euro an die Schleuser zu bezahlen und illegal nach Europa einzureisen. 
+_:n2	:bezahlen	data:n4_006_euro.
+_:n2	:do	data:n4_006_euro.
+data:n4_001_werden	a	:werden.
+data:n4_001_werden	rdfs:label	"Das wird viele davon abhalten, Tausende Euro an die Schleuser zu bezahlen und illegal nach Europa einzureisen."^^xsd:string.
+data:n4_006_euro	:cardinality	"1"^^xsd:int.
+data:n4_006_euro	rdfs:label	"Tausende Euro"^^xsd:string.
+data:n4_007_an	rdfs:label	"an die Schleuser"^^xsd:string.
+
+#Insofern: Ja, die Zahlen werden kleiner werden. 
+
+#Aber: Es wird weiterhin schutzbedürftige Menschen vor den Toren Europas geben, vielleicht sogar mehr als früher. 
+
+#ZEIT ONLINE: Die "historische Krise", von der sie unlängst gewarnt haben, ist also nicht vorbei? Leggeri: Natürlich nicht. 
+data:n7_001_online	:cardinality	"1"^^xsd:int.
+data:n7_001_online	rdfs:label	"ZEIT ONLINE:"^^xsd:string.
+data:n7_005_von	:do	_:n3.
+data:n7_005_von	:warnen	_:n3.
+data:n7_005_von	rdfs:label	"von der sie"^^xsd:string.
+data:n7_011_sein	a	:sein.
+data:n7_011_sein	rdfs:label	"ZEIT ONLINE: Die &quot;historische Krise&quot;, von der sie unlängst gewarnt haben, ist also nicht vorbei? Leggeri: Natürlich nicht."^^xsd:string.
+
+#Die Ursachen sind die gleichen geblieben. 
+
+#In Syrien herrscht noch immer ein Bürgerkrieg, in dessen Folge rund die Hälfte der Bevölkerung das Land verlassen hat. 
+data:n9_000_in	rdfs:label	"In Syrien"^^xsd:string.
+data:n9_002_herrschen	a	:herrschen.
+data:n9_002_herrschen	rdfs:label	"In Syrien herrscht noch immer ein Bürgerkrieg, in dessen Folge rund die Hälfte der Bevölkerung das Land verlassen hat."^^xsd:string.
+data:n9_006_bürgerkrieg	:cardinality	"1"^^xsd:int.
+data:n9_006_bürgerkrieg	:do	data:n9_000_in.
+data:n9_006_bürgerkrieg	:herrschen	data:n9_000_in.
+data:n9_006_bürgerkrieg	a	:bürgerkrieg.
+data:n9_006_bürgerkrieg	rdfs:label	"ein Bürgerkrieg, in dessen Folge rund die Hälfte der Bevölkerung das Land verlassen hat."^^xsd:string.
+
+#Allein in Jordanien leben vier Millionen Menschen in Flüchtlingslagern. 
+
+#Je ferner der Frieden rückt, desto verzweifelter werden diese Leute. 
+
+#Diese Menschen verschwinden nicht. 
+
+#Und Europa hat weiterhin die Pflicht, ihnen Schutz zu gewähren. 
+
+#ZEIT ONLINE: Ob jemand Schutz bekommt oder nicht, entscheidet nun einer der schwächsten und schlecht organisiertesten Staaten der EU: Griechenland. 
+data:n14_002_ob	:bekommen	data:n14_003_jemand.
+data:n14_002_ob	:cardinality	"1"^^xsd:int.
+data:n14_002_ob	:do	data:n14_003_jemand.
+data:n14_002_ob	rdfs:label	"ZEIT ONLINE: Ob"^^xsd:string.
+data:n14_003_jemand	rdfs:label	"jemand Schutz"^^xsd:string.
+data:n14_005_bekommen	a	:bekommen.
+data:n14_005_bekommen	rdfs:label	"ZEIT ONLINE: Ob jemand Schutz bekommt oder nicht, entscheidet nun einer der schwächsten und schlecht organisiertesten Staaten der EU: Griechenland."^^xsd:string.
+
+#Finden Sie das nicht problematisch? Leggeri: Griechenland ist nicht allein, sondern bekommt Hilfe aus Europa, auch von Frontex. 
+_:n4	:bekommen	data:n15_012_hilfe.
+_:n4	:do	data:n15_012_hilfe.
+data:n15_000_finden	a	:finden.
+data:n15_000_finden	rdfs:label	"Finden Sie das nicht problematisch? Leggeri: Griechenland ist nicht allein, sondern bekommt Hilfe aus Europa, auch von Frontex."^^xsd:string.
+data:n15_012_hilfe	:cardinality	"1"^^xsd:int.
+data:n15_012_hilfe	a	:hilfe.
+data:n15_012_hilfe	rdfs:label	"Hilfe aus Europa,"^^xsd:string.
+
+#Aber es stimmt: Wir müssen sicherstellen, dass die wirklich Schutzbedürftigen diesen Schutz auch erhalten können. 
+data:n16_000_aber	rdfs:label	"Aber"^^xsd:string.
+data:n16_001_es	:do	data:n16_000_aber.
+data:n16_001_es	:stimmt	data:n16_000_aber.
+data:n16_001_es	rdfs:label	"es"^^xsd:string.
+data:n16_002_stimmt	a	:stimmt.
+data:n16_002_stimmt	rdfs:label	"Aber es stimmt: Wir müssen sicherstellen, dass die wirklich Schutzbedürftigen diesen Schutz auch erhalten können."^^xsd:string.
+data:n16_009_schutzbedürftige	:cardinality	"1"^^xsd:int.
+data:n16_009_schutzbedürftige	:do	data:n16_011_schutz.
+data:n16_009_schutzbedürftige	:erhalten	data:n16_011_schutz.
+data:n16_009_schutzbedürftige	a	:schutzbedürftige.
+data:n16_009_schutzbedürftige	rdfs:label	"die wirklich Schutzbedürftigen"^^xsd:string.
+data:n16_011_schutz	:cardinality	"1"^^xsd:int.
+data:n16_011_schutz	a	:schutz.
+data:n16_011_schutz	rdfs:label	"diesen Schutz"^^xsd:string.
+data:n16_012_auch	rdfs:label	"auch"^^xsd:string.
+
+#ZEIT ONLINE: Sie klingen skeptisch. 
+
+#Leggeri: Es wird eine große Aufgabe. 
+
+#Wir von Frontex werden uns daran mit bis zu 1500 Beamten beteiligen, darunter Grenzbeamte und Experten für die Registrierung von Asylsuchenden. 
+
+#ZEIT ONLINE: De Facto läuft der Deal darauf hinaus, dass nur noch wenige Menschen in Europa Asyl beantragen können – weil die Türkei nun als sicheres Herkunftsland gilt. 
+data:n20_004_laufen	a	:laufen.
+data:n20_004_laufen	rdfs:label	"ZEIT ONLINE: De Facto läuft der Deal darauf hinaus, dass nur noch wenige Menschen in Europa Asyl beantragen können – weil die Türkei nun als sicheres Herkunftsland gilt."^^xsd:string.
+data:n20_013_mensch	:cardinality	"1"^^xsd:int.
+data:n20_013_mensch	a	:mensch.
+data:n20_013_mensch	rdfs:label	"wenige Menschen"^^xsd:string.
+data:n20_014_in	rdfs:label	"in Europa"^^xsd:string.
+data:n20_019_	:beantragen	data:n20_013_mensch.
+data:n20_019_	:do	data:n20_013_mensch.
+data:n20_019_	rdfs:label	"–"^^xsd:string.
+data:n20_022_türkei	:cardinality	"1"^^xsd:int.
+data:n20_022_türkei	:do	_:n5.
+data:n20_022_türkei	:gilt	_:n5.
+data:n20_022_türkei	rdfs:label	"die Türkei"^^xsd:string.
+data:n20_024_als	rdfs:label	"als sicheres Herkunftsland"^^xsd:string.
+
+#Wie finden Sie das? Leggeri: Der Deal mit der Türkei ist ein Kompromiss. 
+
+#Und wir sollten uns bewusst machen, was für eine gewaltige Aufgabe auf die Türken zukommt. 
+
+#Grundsätzlich bin ich aber der Meinung, dass wir legale Wege für Flüchtlinge in die EU schaffen müssen, damit Europa seiner Verpflichtung nachkommt, Asylsuchenden Schutz zu gewähren. 
+
+#Und da sind die 18.000 Menschen im Jahr – von denen bislang die Rede ist – sicherlich nur ein Anfang. 
+
+#ZEIT ONLINE: Bisher haben wir sie als Chef einer Agentur wahrgenommen, die helfen soll, Europa abzuschotten – auch vor potentiellen Flüchtlingen. 
+
+#Jetzt mahnen sie an, dass Europa den Flüchtlingen weiterhin Asyl gewähren muss. 
+data:n26_000_jetzt	rdfs:label	"Jetzt"^^xsd:string.
+data:n26_001_mahnen	a	:mahnen.
+data:n26_001_mahnen	rdfs:label	"Jetzt mahnen sie an, dass Europa den Flüchtlingen weiterhin Asyl gewähren muss."^^xsd:string.
+data:n26_002_sie	:do	data:n26_000_jetzt.
+data:n26_002_sie	:mahnen	data:n26_000_jetzt.
+data:n26_002_sie	rdfs:label	"sie"^^xsd:string.
+
+#Wie geht das zusammen? Fabrice Leggeri Fabrice Leggeri, 47, geboren im Elsass, ist seit mehr als einem Jahr Chef der europäischen Grenzschutzagentur Frontex mit Sitz in Warschau. 
+data:n27_004_fabrice	:cardinality	"1"^^xsd:int.
+data:n27_004_fabrice	:do	_:n6.
+data:n27_004_fabrice	:gebären	_:n6.
+data:n27_004_fabrice	rdfs:label	"das zusammen? Fabrice Leggeri Fabrice Leggeri,"^^xsd:string.
+data:n27_012_sein	a	:sein.
+data:n27_012_sein	rdfs:label	"Wie geht das zusammen? Fabrice Leggeri Fabrice Leggeri, 47, geboren im Elsass, ist seit mehr als einem Jahr Chef der europäischen Grenzschutzagentur Frontex mit Sitz in Warschau."^^xsd:string.
+
+#Zuvor arbeitete er mehrere Jahre als Beamter im französischen Innenministerium, in der Abteilung für die Eindämmung illegaler Migration. 
+data:n28_000_zuvor	rdfs:label	"Zuvor"^^xsd:string.
+data:n28_001_arbeiten	a	:arbeiten.
+data:n28_001_arbeiten	rdfs:label	"Zuvor arbeitete er mehrere Jahre als Beamter im französischen Innenministerium, in der Abteilung für die Eindämmung illegaler Migration."^^xsd:string.
+data:n28_002_er	:arbeiten	_:n7.
+data:n28_002_er	:do	_:n7.
+data:n28_002_er	rdfs:label	"er"^^xsd:string.
+data:n28_005_als	rdfs:label	"als Beamter"^^xsd:string.
+
+#Als Berater der Europäischen Kommission war er zuständig für die Gründung von Frontex, jener Agentur, die er heute leitet. 
+
+#Sogar den Namen Frontex - eine Abkürzung für frontières extérieures – hat er damals erfunden. 
+
+#Leggeri: Das war und ist ein Missverständnis. 
+
+#Wir sind zwar für den europäischen Grenzschutz zuständig. 
+
+#Aber sobald unsere Mitarbeiter auf Menschen – etwa während einer Rettung auf dem Meer – treffen und diese Menschen bitten um Asyl, verhalten wir uns neutral und leiten die Personen an die zuständigen Behörden weiter. 
+
+#Wir weisen niemanden ab und dürfen das auch gar nicht. 
+
+#In den vergangenen Monaten waren wir übrigens an neunzig Prozent aller Seenotrettungen im Mittelmeer beteiligt. 
+
+#ZEIT ONLINE: Dennoch soll Frontex eigentlich helfen, die europäischen Grenzen sichern. 
+
+#Im vergangenen Jahr gab es 1,8 Millionen illegale Grenzübertritte nach Europa. 
+
+#Was ist aus Sicht von Frontex schief gelaufen? Leggeri: Was sich geändert hat, war der gewaltige Zustrom an Menschen. 
+data:n38_000_was	rdfs:label	"Was"^^xsd:string.
+data:n38_001_sein	a	:sein.
+data:n38_001_sein	rdfs:label	"Was ist aus Sicht von Frontex schief gelaufen? Leggeri: Was sich geändert hat, war der gewaltige Zustrom an Menschen."^^xsd:string.
+data:n38_002_aus	:do	_:n8.
+data:n38_002_aus	:ändern	_:n8.
+data:n38_002_aus	rdfs:label	"aus Sicht von Frontex schief gelaufen? Leggeri: Was"^^xsd:string.
+
+#Und den gab es, weil die Welt sich um Europa herum rapide verändert hat. 
+data:n39_002_geben	a	:geben.
+data:n39_002_geben	rdfs:label	"Und den gab es, weil die Welt sich um Europa herum rapide verändert hat."^^xsd:string.
+data:n39_006_welt	:cardinality	"1"^^xsd:int.
+data:n39_006_welt	:do	_:n9.
+data:n39_006_welt	:verändern	_:n9.
+data:n39_006_welt	a	:welt.
+data:n39_006_welt	rdfs:label	"die Welt"^^xsd:string.
+
+#In Syrien, in Teilen Afrikas, im Nahen Osten: überall sind neue Krisenherde entstanden oder haben sich die Zustände für die Menschen verschlechert. 
+data:n40_009_sein	a	:sein.
+data:n40_009_sein	rdfs:label	"In Syrien, in Teilen Afrikas, im Nahen Osten: überall sind neue Krisenherde entstanden oder haben sich die Zustände für die Menschen verschlechert."^^xsd:string.
+data:n40_011_krisenherd	:cardinality	"1"^^xsd:int.
+data:n40_011_krisenherd	:do	_:n10.
+data:n40_011_krisenherd	:entstehen	_:n10.
+data:n40_011_krisenherd	a	:krisenherd.
+data:n40_011_krisenherd	rdfs:label	"neue Krisenherde"^^xsd:string.
+
+#Es ist die pure Verzweiflung, die die Menschen nach Europa hat fliehen lassen. 
+
+#Ich habe manchmal das Gefühl, dass viele EU-Bürger das Ausmaß dieser Entwicklung nicht ganz begriffen haben. 
+data:n42_001_haben	a	:haben.
+data:n42_001_haben	rdfs:label	"Ich habe manchmal das Gefühl, dass viele EU-Bürger das Ausmaß dieser Entwicklung nicht ganz begriffen haben."^^xsd:string.
+data:n42_005_dass	rdfs:label	"manchmal das Gefühl, dass"^^xsd:string.
+data:n42_007_eu_bürger	:begreifen	data:n42_009_ausmaß.
+data:n42_007_eu_bürger	:cardinality	"1"^^xsd:int.
+data:n42_007_eu_bürger	:do	data:n42_009_ausmaß.
+data:n42_007_eu_bürger	a	:eu_bürger.
+data:n42_007_eu_bürger	rdfs:label	"viele EU-Bürger"^^xsd:string.
+data:n42_009_ausmaß	:cardinality	"1"^^xsd:int.
+data:n42_009_ausmaß	a	:ausmaß.
+data:n42_009_ausmaß	rdfs:label	"das Ausmaß dieser Entwicklung"^^xsd:string.
+
+#ZEIT ONLINE: Auf der anderen Seite verstehen viele Bürger nicht, warum Europas Grenzen so schwer zu bewachen sind. 
+data:n43_001_online	:cardinality	"1"^^xsd:int.
+data:n43_001_online	:do	data:n43_008_bürger.
+data:n43_001_online	:verstehen	data:n43_008_bürger.
+data:n43_001_online	rdfs:label	"ZEIT ONLINE: Auf der anderen Seite"^^xsd:string.
+data:n43_006_verstehen	a	:verstehen.
+data:n43_006_verstehen	rdfs:label	"ZEIT ONLINE: Auf der anderen Seite verstehen viele Bürger nicht, warum Europas Grenzen so schwer zu bewachen sind."^^xsd:string.
+data:n43_008_bürger	:cardinality	"1"^^xsd:int.
+data:n43_008_bürger	a	:bürger.
+data:n43_008_bürger	rdfs:label	"viele Bürger"^^xsd:string.
+
+#Leggeri: Manche Teile der Grenze sind leichter zu bewachen, andere – etwa rund um die griechischen Inseln – schwerer. 
+
+#Und es kommt darauf an, ob wir Ansprechpartner in den angrenzenden Ländern haben. 
+data:n45_002_kommen	a	:kommen.
+data:n45_002_kommen	rdfs:label	"Und es kommt darauf an, ob wir Ansprechpartner in den angrenzenden Ländern haben."^^xsd:string.
+data:n45_003_darauf	:do	_:n11.
+data:n45_003_darauf	:kommen	_:n11.
+data:n45_003_darauf	rdfs:label	"darauf"^^xsd:string.
+
+#In Libyen etwa ist die Situation politisch extrem schwierig, deshalb haben es die Schleuser dort leichter. 
+
+#Und die Türkei könnte meiner Ansicht als Exekutivdirektor von Frontex nach mehr tun, um Schleuser zu bekämpfen. 
+
+#Aber es stimmt schon: Wir brauchen einen effektiveren Grenzschutz und eine gemeinsamen, europäischen Ansatz. 
+data:n48_002_stimmen	a	:stimmen.
+data:n48_002_stimmen	rdfs:label	"Aber es stimmt schon: Wir brauchen einen effektiveren Grenzschutz und eine gemeinsamen, europäischen Ansatz."^^xsd:string.
+data:n48_004_wir	:brauchen	_:n12.
+data:n48_004_wir	:do	_:n12.
+data:n48_004_wir	rdfs:label	"Wir"^^xsd:string.
+data:n48_008_grenzschutz	:cardinality	"1"^^xsd:int.
+data:n48_008_grenzschutz	a	:grenzschutz.
+data:n48_008_grenzschutz	rdfs:label	"einen effektiveren Grenzschutz und eine gemeinsamen, europäischen Ansatz."^^xsd:string.
+
+#Deshalb begrüßen wir auch den Vorschlag der EU-Kommission, die Frontex zu einer eigenständigen Grenzschutzbehörde mit breiterem Mandat ausbauen will.  Allerdings sage ich auch: Manchmal fragen wir uns, ob wir wirklich die notwendige Unterstützung aller Mitgliedsstaaten haben. 
+data:n49_000_deshalb	rdfs:label	"Deshalb"^^xsd:string.
+data:n49_001_begrüßen	a	:begrüßen.
+data:n49_001_begrüßen	rdfs:label	"Deshalb begrüßen wir auch den Vorschlag der EU-Kommission, die Frontex zu einer eigenständigen Grenzschutzbehörde mit breiterem Mandat ausbauen will.  Allerdings sage ich auch: Manchmal fragen wir uns, ob wir wirklich die notwendige Unterstützung aller Mitgliedsstaaten haben."^^xsd:string.
+data:n49_002_wir	:begrüßen	data:n49_000_deshalb.
+data:n49_002_wir	:do	data:n49_000_deshalb.
+data:n49_002_wir	rdfs:label	"wir"^^xsd:string.
+data:n49_005_vorschlag	:cardinality	"1"^^xsd:int.
+data:n49_005_vorschlag	:do	data:n49_017_ausbauen.
+data:n49_005_vorschlag	:sagen	data:n49_017_ausbauen.
+data:n49_005_vorschlag	a	:vorschlag.
+data:n49_005_vorschlag	rdfs:label	"auch den Vorschlag der EU-Kommission,"^^xsd:string.
+data:n49_017_ausbauen	a	:ausbauen.
+data:n49_017_ausbauen	rdfs:label	"die Frontex zu einer eigenständigen Grenzschutzbehörde mit breiterem Mandat ausbauen will.  Allerdings"^^xsd:string.
+data:n49_020_sagen	a	:sagen.
+data:n49_020_sagen	rdfs:label	"auch den Vorschlag der EU-Kommission, die Frontex zu einer eigenständigen Grenzschutzbehörde mit breiterem Mandat ausbauen will.  Allerdings sage ich auch: Manchmal fragen wir uns, ob wir wirklich die notwendige Unterstützung aller Mitgliedsstaaten haben."^^xsd:string.
+data:n49_025_wir	:do	data:n49_035_haben.
+data:n49_025_wir	:fragen	data:n49_035_haben.
+data:n49_025_wir	rdfs:label	"wir"^^xsd:string.
+data:n49_035_haben	a	:haben.
+data:n49_035_haben	rdfs:label	"ob wir die notwendige Unterstützung aller Mitgliedsstaaten haben."^^xsd:string.
+
+#ZEIT ONLINE: Was fehlt ihnen? Leggeri: Ich will Ihnen ein Beispiel geben. 
+data:n50_001_online	:cardinality	"1"^^xsd:int.
+data:n50_001_online	:do	data:n50_002_was.
+data:n50_001_online	:fehlen	data:n50_002_was.
+data:n50_001_online	rdfs:label	"ZEIT ONLINE:"^^xsd:string.
+data:n50_002_was	rdfs:label	"Was"^^xsd:string.
+data:n50_003_fehlen	a	:fehlen.
+data:n50_003_fehlen	rdfs:label	"ZEIT ONLINE: Was fehlt ihnen? Leggeri: Ich will Ihnen ein Beispiel geben."^^xsd:string.
+
+#Als ich im vergangenen Oktober in einem Brief an die Mitgliedsstaaten um 775 Grenzbeamte zur Bewältigung der Flüchtlingskrise gebeten habe, bekam ich aus manchen Ländern einen Anruf.  Ob mir in meinem Brief ein Fehler unterlaufen sei? Ich hätte doch wohl eher 75 statt 775 Beamte gemeint.  ZEIT ONLINE: Was haben Sie geantwortet? Leggeri: Das es natürlich kein Fehler war und wir die Leute brauchen. 
+data:n51_001_ich	:bitten	data:n51_005_in.
+data:n51_001_ich	:do	data:n51_005_in.
+data:n51_001_ich	rdfs:label	"ich"^^xsd:string.
+data:n51_005_in	rdfs:label	"in einem Brief an die Mitgliedsstaaten um 775 Grenzbeamte zur Bewältigung der Flüchtlingskrise"^^xsd:string.
+data:n51_020_bekommen	a	:bekommen.
+data:n51_020_bekommen	rdfs:label	"Als ich im vergangenen Oktober in einem Brief an die Mitgliedsstaaten um 775 Grenzbeamte zur Bewältigung der Flüchtlingskrise gebeten habe, bekam ich aus manchen Ländern einen Anruf.  Ob mir in meinem Brief ein Fehler unterlaufen sei? Ich hätte doch wohl eher 75 statt 775 Beamte gemeint.  ZEIT ONLINE: Was haben Sie geantwortet? Leggeri: Das es natürlich kein Fehler war und wir die Leute brauchen."^^xsd:string.
+data:n51_021_ich	:bekommen	data:n51_022_aus.
+data:n51_021_ich	:do	data:n51_022_aus.
+data:n51_021_ich	rdfs:label	"ich"^^xsd:string.
+data:n51_022_aus	rdfs:label	"aus manchen Ländern einen Anruf. "^^xsd:string.
+data:n51_036_ich	:do	data:n51_053_der.
+data:n51_036_ich	:geantwortet	data:n51_053_der.
+data:n51_036_ich	rdfs:label	"Ich"^^xsd:string.
+data:n51_053_der	rdfs:label	"Das"^^xsd:string.
+
+#Das lässt mich zweifeln, ob alle Mitgliedsstaaten wissen, wie schwerwiegend diese Krise ist. 
+data:n52_000_der	rdfs:label	"Das"^^xsd:string.
+data:n52_001_lässt	a	:lässt.
+data:n52_001_lässt	rdfs:label	"Das lässt mich zweifeln, ob alle Mitgliedsstaaten wissen, wie schwerwiegend diese Krise ist."^^xsd:string.
+data:n52_002_mich	:do	data:n52_000_der.
+data:n52_002_mich	:lässt	data:n52_000_der.
+data:n52_002_mich	rdfs:label	"mich"^^xsd:string.
+
+#Ein guter Grenzschutz kann außerdem eine gute Migrationspolitik nicht ersetzen. 
+
+#Und die Krise des vergangenen Jahres war in meinen Augen keine Krise von Schengen, sondern eine Krise des europäischen Asylsystems. 
+
+#ZEIT ONLINE: Wie meinen Sie das? Leggeri: Die meisten Flüchtlinge sind im vergangenen Jahr über die Türkei nach Griechenland gekommen. 
+data:n55_003_meinen	a	:meinen.
+data:n55_003_meinen	rdfs:label	"ZEIT ONLINE: Wie meinen Sie das? Leggeri: Die meisten Flüchtlinge sind im vergangenen Jahr über die Türkei nach Griechenland gekommen."^^xsd:string.
+data:n55_004_sie	:do	data:n55_010_sein.
+data:n55_004_sie	:meinen	data:n55_010_sein.
+data:n55_004_sie	rdfs:label	"Sie"^^xsd:string.
+data:n55_010_sein	a	:sein.
+data:n55_010_sein	rdfs:label	"Leggeri: Die meisten Flüchtlinge sind im vergangenen Jahr über die Türkei nach Griechenland gekommen."^^xsd:string.
+
+#Dort trafen sie auf ein Land, das in einer tiefen Krise steckte. 
+
+#Das Land war weder in der Lage, die Grenzen ausreichend zu sichern, noch hatte es offenbar genug Kapazitäten, die Flüchtlinge zu registrieren. 
+
+#Viele Menschen sind dann einfach nach Norden weitergezogen, ohne dass es überhaupt eine Chance gebeben hätte, die Menschen zu registrieren und halbwegs gerecht in Europa zu verteilen. 
+
+#ZEIT ONLINE: Griechenland wurde allein gelassen? Leggeri: Man hat sich darauf verlassen, dass Griechenland es schon hinbekommt. 
+
+#Das war aber offenbar nicht der Fall. 
+
+#Ich selbst habe damals im Juni informell in Brüssel angeboten, dass Frontex für einige Monate die Gehälter der griechischen Grenzbeamten bezahlt, damit der Grenzschutz intakt bleibt. 
+
+#Wir haben auch angeboten, an der griechisch-mazedonischen Grenze zu helfen. 
+data:n62_000_wir	:do	data:n62_004_an.
+data:n62_000_wir	:helfen	data:n62_004_an.
+data:n62_000_wir	rdfs:label	"Wir"^^xsd:string.
+data:n62_001_haben	a	:haben.
+data:n62_001_haben	rdfs:label	"Wir haben auch angeboten, an der griechisch-mazedonischen Grenze zu helfen."^^xsd:string.
+data:n62_004_an	rdfs:label	"an der griechisch-mazedonischen Grenze"^^xsd:string.
+
+#Beides wurde abgelehnt – weil wir dafür kein Mandat haben. 
+data:n63_000_beide	rdfs:label	"Beides"^^xsd:string.
+data:n63_001_werden	a	:werden.
+data:n63_001_werden	rdfs:label	"Beides wurde abgelehnt – weil wir dafür kein Mandat haben."^^xsd:string.
+data:n63_009_haben	:ablehnen	data:n63_000_beide.
+data:n63_009_haben	:do	data:n63_000_beide.
+data:n63_009_haben	a	:haben.
+data:n63_009_haben	rdfs:label	"weil wir dafür kein Mandat haben."^^xsd:string.
+
+#Ich frage mich trotzdem: Warum hat sich die EU auf ein Land verlassen, das in mitten einer finanziellen Krise war? ZEIT ONLINE: Eine andere Frage lautet, warum Europa die geordnete Aufnahme von Flüchtlingen an ein paar Millionen für Grenzbeamte scheitern lässt. 
+data:n64_000_ich	:do	data:n64_005_haben.
+data:n64_000_ich	:fragen	data:n64_005_haben.
+data:n64_000_ich	rdfs:label	"Ich"^^xsd:string.
+data:n64_001_fragen	a	:fragen.
+data:n64_001_fragen	rdfs:label	"Ich frage mich trotzdem: Warum hat sich die EU auf ein Land verlassen, das in mitten einer finanziellen Krise war? ZEIT ONLINE: Eine andere Frage lautet, warum Europa die geordnete Aufnahme von Flüchtlingen an ein paar Millionen für Grenzbeamte scheitern lässt."^^xsd:string.
+data:n64_005_haben	a	:haben.
+data:n64_005_haben	rdfs:label	"trotzdem: Warum hat sich die EU auf ein Land verlassen, das in mitten einer finanziellen Krise war? ZEIT ONLINE: Eine andere Frage lautet, warum Europa die geordnete Aufnahme von Flüchtlingen an ein paar Millionen für Grenzbeamte scheitern lässt."^^xsd:string.
+
+#Leggeri: Das Problem sind nicht die paar Millionen Euro. 
+
+#Das Problem ist zu wenig Solidarität zwischen den Mitgliedsstaaten. 
+
+#Einige Regierungschefs denken mittlerweile nur noch national. 
+data:n67_001_regierungschef	:cardinality	"1"^^xsd:int.
+data:n67_001_regierungschef	:denken	data:n67_003_mittlerweile.
+data:n67_001_regierungschef	:do	data:n67_003_mittlerweile.
+data:n67_001_regierungschef	a	:regierungschef.
+data:n67_001_regierungschef	rdfs:label	"Einige Regierungschefs"^^xsd:string.
+data:n67_002_denken	a	:denken.
+data:n67_002_denken	rdfs:label	"Einige Regierungschefs denken mittlerweile nur noch national."^^xsd:string.
+data:n67_003_mittlerweile	rdfs:label	"mittlerweile"^^xsd:string.
+
+#Und sie tun das, weil ihre Wähler es von ihnen einfordern. 
+
+#Die Bürger verstehen nicht, dass wir es mit einer europäischen Aufgabe zu tun haben, die wir auf nationaler Ebene nicht lösen können. 
+data:n69_001_bürger	:cardinality	"1"^^xsd:int.
+data:n69_001_bürger	a	:bürger.
+data:n69_001_bürger	rdfs:label	"Die Bürger"^^xsd:string.
+data:n69_002_verstehen	a	:verstehen.
+data:n69_002_verstehen	rdfs:label	"Die Bürger verstehen nicht, dass wir es mit einer europäischen Aufgabe zu tun haben, die wir auf nationaler Ebene nicht lösen können."^^xsd:string.
+data:n69_003_nicht	:do	data:n69_001_bürger.
+data:n69_003_nicht	:verstehen	data:n69_001_bürger.
+data:n69_003_nicht	rdfs:label	"nicht,"^^xsd:string.
+
+#Das ist fatal, denn wir das Problem nur national betrachten, werden wir scheitern.   "Zäune können Menschen auf Dauer nicht stoppen" ZEIT ONLINE: Die deutsche Kanzlerin Angela Merkel stand in Brüssel lange Zeit alleine mit ihrer Forderung nach einer europäischen Lösung. 
+
+#Vor allem aus Osteuropa kam der Vorwurf, sie habe mit ihrer Politik die Flüchtlinge erst nach Europa gelockt. 
+data:n71_002_aus	rdfs:label	"Vor allem aus Osteuropa"^^xsd:string.
+data:n71_004_kommen	a	:kommen.
+data:n71_004_kommen	rdfs:label	"Vor allem aus Osteuropa kam der Vorwurf, sie habe mit ihrer Politik die Flüchtlinge erst nach Europa gelockt."^^xsd:string.
+data:n71_006_vorwurf	:cardinality	"1"^^xsd:int.
+data:n71_006_vorwurf	:do	data:n71_002_aus.
+data:n71_006_vorwurf	:kommen	data:n71_002_aus.
+data:n71_006_vorwurf	a	:vorwurf.
+data:n71_006_vorwurf	rdfs:label	"der Vorwurf,"^^xsd:string.
+
+#Leggeri: Wenn ich sage, dass wir mehr Solidarität brauchen, dann denke ich auch an Deutschland. 
+data:n72_000_leggeri	:cardinality	"1"^^xsd:int.
+data:n72_000_leggeri	rdfs:label	"Leggeri:"^^xsd:string.
+data:n72_002_ich	:do	data:n72_004_dass.
+data:n72_002_ich	:sage	data:n72_004_dass.
+data:n72_002_ich	rdfs:label	"ich"^^xsd:string.
+data:n72_004_dass	rdfs:label	"dass wir mehr Solidarität brauchen, dann"^^xsd:string.
+data:n72_010_denken	a	:denken.
+data:n72_010_denken	rdfs:label	"Leggeri: Wenn ich sage, dass wir mehr Solidarität brauchen, dann denke ich auch an Deutschland."^^xsd:string.
+data:n72_011_ich	:denken	data:n72_012_auch.
+data:n72_011_ich	:do	data:n72_012_auch.
+data:n72_011_ich	rdfs:label	"ich"^^xsd:string.
+data:n72_012_auch	rdfs:label	"auch"^^xsd:string.
+
+#Mein Eindruck war, dass viele Mitgliedsstaaten im vergangenen Jahr gedacht haben: Deutschland will alle Flüchtlinge haben, dann soll Deutschland auch alle Flüchtlinge bekommen. 
+_:n13	:do	data:n73_021_flüchtling.
+_:n13	:haben	data:n73_021_flüchtling.
+data:n73_002_war	a	:war.
+data:n73_002_war	rdfs:label	"Mein Eindruck war, dass viele Mitgliedsstaaten im vergangenen Jahr gedacht haben: Deutschland will alle Flüchtlinge haben, dann soll Deutschland auch alle Flüchtlinge bekommen."^^xsd:string.
+data:n73_014_flüchtling	:cardinality	"1"^^xsd:int.
+data:n73_014_flüchtling	a	:flüchtling.
+data:n73_014_flüchtling	rdfs:label	"alle Flüchtlinge"^^xsd:string.
+data:n73_021_flüchtling	:cardinality	"1"^^xsd:int.
+data:n73_021_flüchtling	a	:flüchtling.
+data:n73_021_flüchtling	rdfs:label	"auch alle Flüchtlinge"^^xsd:string.
+
+#Das wurde zwar nicht so gesagt, aber im Grunde haben das viele in Europa gehofft. 
+
+#Es geht aber nicht, dass nur ein, zwei oder drei Staaten alle Flüchtlinge nehmen. 
+
+#Es handelt sich um ein europäisches Problem. 
+
+#ZEIT ONLINE: Einige Mitgliedsstaaten wie Ungarn haben als Reaktion auf die Flüchtlinge Zäune gebaut und nationale Grenzkontrollen eingeführt. 
+data:n77_001_online	:bauen	_:n14.
+data:n77_001_online	:cardinality	"1"^^xsd:int.
+data:n77_001_online	:do	_:n14.
+data:n77_001_online	rdfs:label	"ZEIT ONLINE:"^^xsd:string.
+data:n77_003_mitgliedsstaat	:cardinality	"1"^^xsd:int.
+data:n77_003_mitgliedsstaat	a	:mitgliedsstaat.
+data:n77_003_mitgliedsstaat	rdfs:label	"Einige Mitgliedsstaaten wie Ungarn"^^xsd:string.
+data:n77_006_haben	a	:haben.
+data:n77_006_haben	rdfs:label	"ZEIT ONLINE: Einige Mitgliedsstaaten wie Ungarn haben als Reaktion auf die Flüchtlinge Zäune gebaut und nationale Grenzkontrollen eingeführt."^^xsd:string.
+
+#Kritisieren Sie das? Leggeri: Ich verstehe das erst einmal. 
+_:n16	:do	data:n78_004_ich.
+_:n16	:verstehen	data:n78_004_ich.
+data:n78_000_kritisieren	a	:kritisieren.
+data:n78_000_kritisieren	rdfs:label	"Kritisieren Sie das? Leggeri: Ich verstehe das erst einmal."^^xsd:string.
+data:n78_001_sie	:do	_:n15.
+data:n78_001_sie	:kritisieren	_:n15.
+data:n78_001_sie	rdfs:label	"Sie"^^xsd:string.
+data:n78_002_das	rdfs:label	"das?"^^xsd:string.
+data:n78_004_ich	rdfs:label	"Ich"^^xsd:string.
+
+#Und die Europäische Kommission hat festgestellt, dass die Grenzkontrollen mit europäischem Schengen-Recht vereinbar sind. 
+
+#Dennoch halte ich es für absolut historisch, wenn skandinavische Länder wie Finnland, Schweden oder Dänemark erstmals seit den Fünfziger Jahren wieder Kontrollen einführen. 
+
+#Und ich fürchte mich vor den Folgen. 
+data:n81_001_ich	:do	data:n81_003_mich.
+data:n81_001_ich	:fürchen	data:n81_003_mich.
+data:n81_001_ich	rdfs:label	"ich"^^xsd:string.
+data:n81_002_fürchen	a	:fürchen.
+data:n81_002_fürchen	rdfs:label	"Und ich fürchte mich vor den Folgen."^^xsd:string.
+data:n81_003_mich	rdfs:label	"mich"^^xsd:string.
+data:n81_004_vor	rdfs:label	"vor den Folgen."^^xsd:string.
+
+#Schätzungen zufolge wird das Europa jedes Jahr zwischen 5 und 18 Milliarden Euro kosten. 
+
+#Geschlossene Grenzen bedeuten einen erheblichen Schaden für die europäische Binnenwirtschaft. 
+data:n83_001_grenze	:bedeuten	data:n83_005_schaden.
+data:n83_001_grenze	:cardinality	"1"^^xsd:int.
+data:n83_001_grenze	:do	data:n83_005_schaden.
+data:n83_001_grenze	a	:grenze.
+data:n83_001_grenze	rdfs:label	"Geschlossene Grenzen"^^xsd:string.
+data:n83_002_bedeuten	a	:bedeuten.
+data:n83_002_bedeuten	rdfs:label	"Geschlossene Grenzen bedeuten einen erheblichen Schaden für die europäische Binnenwirtschaft."^^xsd:string.
+data:n83_005_schaden	:cardinality	"1"^^xsd:int.
+data:n83_005_schaden	a	:schaden.
+data:n83_005_schaden	rdfs:label	"einen erheblichen Schaden für die europäische Binnenwirtschaft."^^xsd:string.
+
+#Und sie machen die Zusammenarbeit der Länder in Europa wieder schwieriger. 
+
+#ZEIT ONLINE: Der Zaun von Viktor Orbán hat noch ein weiteres Problem. 
+
+#Er hält die Flüchtlinge keineswegs davon ab, ins Land zu kommen. 
+
+#Leggeri: So ist es. 
+
+#Und das ist auch kein Wunder. 
+
+#Zäune können Menschen auf Dauer nicht stoppen. 
+
+#Sie sind keine Lösung. 
+
+#ZEIT ONLINE: Würde eine Rückkehr zum System von Dublin helfen? Dann müssten die Flüchtlinge strikt wieder in jene Länder zurückgebracht werden, in denen sie ankommen. 
+data:n91_002_werden	a	:werden.
+data:n91_002_werden	rdfs:label	"ZEIT ONLINE: Würde eine Rückkehr zum System von Dublin helfen? Dann müssten die Flüchtlinge strikt wieder in jene Länder zurückgebracht werden, in denen sie ankommen."^^xsd:string.
+data:n91_004_rückkehr	:cardinality	"1"^^xsd:int.
+data:n91_004_rückkehr	a	:rückkehr.
+data:n91_004_rückkehr	rdfs:label	"eine Rückkehr zum System von Dublin helfen?"^^xsd:string.
+data:n91_013_flüchtling	:cardinality	"1"^^xsd:int.
+data:n91_013_flüchtling	:do	data:n91_004_rückkehr.
+data:n91_013_flüchtling	:müssten	data:n91_004_rückkehr.
+data:n91_013_flüchtling	a	:flüchtling.
+data:n91_013_flüchtling	rdfs:label	"die Flüchtlinge"^^xsd:string.
+data:n91_016_in	rdfs:label	"in jene Länder zurückgebracht werden, in denen sie ankommen."^^xsd:string.
+
+#Leggeri: Ich bin kein Experte für Asylrecht. 
+
+#Aber stelle fest, dass diese Regeln veraltet sind. 
+
+#Sie wurden in den achtziger Jahren erfunden, als unter der Führung von Deutschland, Frankreich und den Benelux-Staaten der Schengen-Raum gegründet wurde. 
+data:n94_001_werden	a	:werden.
+data:n94_001_werden	rdfs:label	"Sie wurden in den achtziger Jahren erfunden, als unter der Führung von Deutschland, Frankreich und den Benelux-Staaten der Schengen-Raum gegründet wurde."^^xsd:string.
+data:n94_002_in	:do	_:n17.
+data:n94_002_in	:gründen	_:n17.
+data:n94_002_in	rdfs:label	"in den achtziger Jahren erfunden, als unter der Führung von Deutschland, Frankreich und den Benelux-Staaten der Schengen-Raum"^^xsd:string.
+
+#Heute sieht die Welt, und damit meine ich unsere weitere Umgebung, Afrika, der Nahe Osten, komplett anders aus. 
+
+#Wir können nicht mehr davon ausgehen, dass ein Land die Last der alleine tragen kann.  ZEIT ONLINE: Was ist die Alternative? Leggeri: Die Europäische Kommission hat im Mai des vergangenen Jahres vier Punkte vorgeschlagen: Wir müssen legale Wege für Flüchtlinge nach Europa schaffen und ein gutes System der Verteilung in Europa finden. 
+
+#Wir brauchen zweitens neue Regeln für Zuwanderer, die aus wirtschaftlichen Gründen zu uns kommen wollen. 
+_:n19	:do	data:n97_008_aus.
+_:n19	:kommen	data:n97_008_aus.
+data:n97_000_wir	:brauchen	_:n18.
+data:n97_000_wir	:do	_:n18.
+data:n97_000_wir	rdfs:label	"Wir"^^xsd:string.
+data:n97_001_brauchen	a	:brauchen.
+data:n97_001_brauchen	rdfs:label	"Wir brauchen zweitens neue Regeln für Zuwanderer, die aus wirtschaftlichen Gründen zu uns kommen wollen."^^xsd:string.
+data:n97_004_regel	:cardinality	"1"^^xsd:int.
+data:n97_004_regel	a	:regel.
+data:n97_004_regel	rdfs:label	"neue Regeln für Zuwanderer, die aus wirtschaftlichen Gründen zu uns kommen wollen."^^xsd:string.
+data:n97_005_für	rdfs:label	"für Zuwanderer, die aus wirtschaftlichen Gründen zu uns kommen wollen."^^xsd:string.
+data:n97_008_aus	rdfs:label	"aus wirtschaftlichen Gründen"^^xsd:string.
+
+#Wir müssen drittens die kriminellen Netzwerke der Schlepper bekämpfen. 
+
+#Und viertens brauchen wir einen einheitlichen, verbesserten Grenzschutz.  ZEIT ONLINE: Sie sagen: Zäune halten Menschen nicht auf. 
+data:n99_002_brauchen	a	:brauchen.
+data:n99_002_brauchen	rdfs:label	"Und viertens brauchen wir einen einheitlichen, verbesserten Grenzschutz.  ZEIT ONLINE: Sie sagen: Zäune halten Menschen nicht auf."^^xsd:string.
+data:n99_003_wir	:brauchen	_:n20.
+data:n99_003_wir	:do	_:n20.
+data:n99_003_wir	rdfs:label	"wir"^^xsd:string.
+data:n99_007_grenzschutz	:cardinality	"1"^^xsd:int.
+data:n99_007_grenzschutz	a	:grenzschutz.
+data:n99_007_grenzschutz	rdfs:label	"einen einheitlichen, verbesserten Grenzschutz.  ZEIT ONLINE: Sie sagen: Zäune halten Menschen nicht auf."^^xsd:string.
+
+#Aber nach der Logik wird auch die Schließung der Balkan-Route die Flüchtlinge nicht davon abhalten, nach Europa zu kommen. 
+
+#Leggeri: Man kann hoffen, dass die Zahl der Flüchtlinge sinkt. 
+
+#Aber komplett schließen wird nicht gehen. 
+
+#Und solange die EU keinen Weg findet, den schutzbedürftigen Menschen einen legalen Weg nach Europa zu zeigen, haben die kriminellen Netzwerke der Schleuser einen Markt. 
+data:n103_003_eu	:cardinality	"1"^^xsd:int.
+data:n103_003_eu	:do	data:n103_009_mensch.
+data:n103_003_eu	:findet	data:n103_009_mensch.
+data:n103_003_eu	rdfs:label	"solange die EU keinen Weg"^^xsd:string.
+data:n103_006_findet	a	:findet.
+data:n103_006_findet	rdfs:label	"Und solange die EU keinen Weg findet, den schutzbedürftigen Menschen einen legalen Weg nach Europa zu zeigen, haben die kriminellen Netzwerke der Schleuser einen Markt."^^xsd:string.
+data:n103_009_mensch	:cardinality	"1"^^xsd:int.
+data:n103_009_mensch	a	:mensch.
+data:n103_009_mensch	rdfs:label	"den schutzbedürftigen Menschen"^^xsd:string.
+
+#ZEIT ONLINE: Über welche Routen werden die Leute kommen? Leggeri: Wir schätzen, dass einige Flüchtlinge über die Westbalkan-Route ausweichen werden, dass sie also über Albanien und dann nach Italien reisen. 
+data:n104_005_werden	a	:werden.
+data:n104_005_werden	rdfs:label	"ZEIT ONLINE: Über welche Routen werden die Leute kommen? Leggeri: Wir schätzen, dass einige Flüchtlinge über die Westbalkan-Route ausweichen werden, dass sie also über Albanien und dann nach Italien reisen."^^xsd:string.
+data:n104_010_wir	:do	data:n104_021_sie.
+data:n104_010_wir	:schätzen	data:n104_021_sie.
+data:n104_010_wir	rdfs:label	"Wir"^^xsd:string.
+data:n104_012_dass	rdfs:label	"dass"^^xsd:string.
+data:n104_021_sie	rdfs:label	"sie"^^xsd:string.
+data:n104_023_über	rdfs:label	"über Albanien und dann nach Italien reisen."^^xsd:string.
+
+#Oder sie nehmen von der Türkei aus den Seeweg nach Bulgarien oder Rumänien. 
+data:n105_001_sie	:do	_:n21.
+data:n105_001_sie	:nehmen	_:n21.
+data:n105_001_sie	rdfs:label	"sie"^^xsd:string.
+data:n105_002_nehmen	a	:nehmen.
+data:n105_002_nehmen	rdfs:label	"Oder sie nehmen von der Türkei aus den Seeweg nach Bulgarien oder Rumänien."^^xsd:string.
+data:n105_003_von	rdfs:label	"von der Türkei aus den Seeweg nach Bulgarien oder Rumänien."^^xsd:string.
+
+#Es ist auch nicht auszuschließen, dass es Menschen über die Ukraine versuchen werden.  ZEIT ONLINE: Das sind allesamt weit gefährlicher Routen als die bisherige Route zwischen Griechenland und der Türkei. 
+data:n106_001_sein	a	:sein.
+data:n106_001_sein	rdfs:label	"Es ist auch nicht auszuschließen, dass es Menschen über die Ukraine versuchen werden.  ZEIT ONLINE: Das sind allesamt weit gefährlicher Routen als die bisherige Route zwischen Griechenland und der Türkei."^^xsd:string.
+data:n106_007_mensch	:cardinality	"1"^^xsd:int.
+data:n106_007_mensch	a	:mensch.
+data:n106_007_mensch	rdfs:label	"Menschen über die Ukraine"^^xsd:string.
+data:n106_020_route	:cardinality	"1"^^xsd:int.
+data:n106_020_route	:do	data:n106_007_mensch.
+data:n106_020_route	:versuchen	data:n106_007_mensch.
+data:n106_020_route	a	:route.
+data:n106_020_route	rdfs:label	"Routen"^^xsd:string.
+
+#Leggeri: Die Überfahrt auf die griechischen Inseln war auch gefährlich. 
+
+#Aber es stimmt: Wir müssen flexibel sein und verhindern, dass Menschen etwa den gefährlichen Weg über die albanischen Berge versuchen. 
+
+#Und wenn der Flüchtlingsstrom sich jetzt nach Bulgarien verlagert, werden wir auch in Bulgarien aktiv sein. 
+
+#ZEIT ONLINE: Die Flüchtlinge werden also weiter kommen? Leggeri: Wir wissen aus der Geschichte: Solange es Krisen und Kriege gibt und Europa ein besseres Leben verspricht, werden Menschen versuchen, hierher zu gelangen. 
+data:n110_004_werden	a	:werden.
+data:n110_004_werden	rdfs:label	"ZEIT ONLINE: Die Flüchtlinge werden also weiter kommen? Leggeri: Wir wissen aus der Geschichte: Solange es Krisen und Kriege gibt und Europa ein besseres Leben verspricht, werden Menschen versuchen, hierher zu gelangen."^^xsd:string.
+data:n110_009_wir	:do	data:n110_014_solange.
+data:n110_009_wir	:wissen	data:n110_014_solange.
+data:n110_009_wir	rdfs:label	"Wir"^^xsd:string.
+data:n110_014_solange	a	:solange.
+data:n110_014_solange	rdfs:label	"aus der Geschichte: Solange es Krisen und Kriege gibt und Europa ein besseres Leben verspricht, werden Menschen versuchen, hierher zu"^^xsd:string.
+
+#Seitennavigation Startseite 
