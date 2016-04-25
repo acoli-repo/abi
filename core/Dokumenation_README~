@@ -284,7 +284,7 @@ C) Resourcen
 
 - Pymantics (https://github.com/norcalrdf/pymantic)
 
-- parse_triples.py (https://valian.uni-frankfurt.de/svn/repository/intern/text-mining/triplevis/converters/parse_triples.py) (bitte unter src/com/ta/converters/ abspeichern)
+- parse_triples.py (https://valian.uni-frankfurt.de/svn/repository/intern/text-mining/triplevis/converters/parse_triples.py)
 
 
 D) Java-Bibliotheken (Maven)
