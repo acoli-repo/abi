@@ -15,7 +15,8 @@ I) NLP-Pipeline
 II) Webinterface
     A) Ordnerstruktur des Quellcodes
     B) Pakete - Funktion
-    C) Externe Ressourcen (blazegraph...)
+    C) Externe Ressourcen
+    D) Java Bibliotheken (Maven)
 III) Konfiguration
 IV) Ausführen der .war-Datei
 
@@ -268,6 +269,23 @@ B) Pakete - Funktion
     Dateien, die die Pipeline erzeugt, werden automatisch in /WebContent/nquads kopiert. download.sh startet einen SimpleHTTPServer (python) 
     in diesem Ordner, um die darin enthaltenen Dateien für den/die UserIn sichtbar zu machen und das Herunterladen davon zu ermöglichen. 
    
+
+
+C) Resourcen
+=============
+
+- Java JRE 1.8
+
+- Tomcat 8
+
+- blazegraph.jar (https://www.blazegraph.com/download/)
+
+- Python 2.7
+
+- Pymantics (https://github.com/norcalrdf/pymantic)
+
+
+
 D) Java-Bibliotheken (Maven)
 ====================
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -407,7 +425,6 @@ III) Konfiguration
 
 - Unter WEB-INF/classes/com/ta/resource/Globals.java (in der .war Datei) muss der absolute Pfad von message.properties angepasst werden (Zeile 31: public final static String _MESSAGE_PATH) 
 - Unter WEB-INF/classes/com/ta/resources/messages.properties (in der .war Datei) die absoluten Pfade anpassen
-- Blazegraph .jar Datei herunterladen, falls noch nicht geschehen
 
 
 
